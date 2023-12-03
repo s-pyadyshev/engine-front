@@ -1,0 +1,11 @@
+mixin page-header(title, subtitle, text, image)
+  section.page-header.background-secondary(class!=attributes.class)
+    .container
+      h2
+        span=title
+      .page-header__text
+        h3 !{subtitle}
+        if text
+          p= text
+      if image 
+        img(src=image alt="alt.")

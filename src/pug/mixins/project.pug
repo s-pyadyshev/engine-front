@@ -1,0 +1,10 @@
+- var loading = typeof loading !== 'undefined' ? loading : null
+
+mixin project(img, logo, title, desc, loading)
+  .project(class!=attributes.class)
+    img.project__header-img(src=`${img}`, alt="img", height="" , width="" loading=loading)
+    .project__wrapper
+      img.project__logo(src=`${logo}`, alt="logo", height="" , width="")
+      .project__info
+        p=title
+        a(href="/")=desc

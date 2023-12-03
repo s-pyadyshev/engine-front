@@ -1,0 +1,58 @@
+extends pug/base
+
+prepend vars
+  - title = 'Case study'
+
+append vars
+
+block content
+  +page-header(
+      'Case study',
+      'Gender equality is a <span>right</span>, not a luxury<span>.</span>',
+      'Vivamus nec quam nec arcu mattis tincidunt. Sed a bibendum nulla. Integer vel urna ut metus efficitur laoreet vel vel libero. Aenean rhoncus, odio quis condimentum tincidunt, erat urna tincidunt mi, nec convallis velit arcu id tortor. Curabitur ut leo vel neque vulputate vehicula. Nullam mattis diam ut euismod vulputate.',
+      'images/close-up-people-protesting-together.jpg'
+    ).page-header--image
+  .card-about.card-about--case-study.section
+    .container-lg
+      .row
+        .card-about__header
+          div Client: <b>WO=MEN</b>
+          div Service: <b>Visual identity</b>
+        .card-about__text.col-12.col-sm-7.col-lg-5.col-xl-5.col-xxl-5.offset-xxl-1
+          h2 An impactful upgrade for real change-makers
+          p Aenean rhoncus, odio quis condimentum tincidunt, erat urna tincidunt mi, nec convallis velit arcu id tortor. Curabitur ut leo vel neque vulputate vehicula. Nullam mattis diam ut euismod vulputate. Vivamus nec quam nec arcu mattis tincidunt. Sed a bibendum nulla.
+        .card-about__img.col-12.col-lg-7.col-xxl-6
+          img(src="images/bag.jpg" alt="Bag" width="812" height="527" loading="lazy")
+  .developer-cite.section.background-muted
+    .container
+      .row.developer-cite__wrapper
+        .col-12.col-md-7
+          blockquote
+            h2 “Our brand needed a refresh, and Engine knew exactly what was needed.”
+          p - Jane Doe, Senior Communications Officer at WO=MEN
+        .col-12.col-md-4.offset-md-1.col-xxl-3.offset-xxl-2
+          +greeting("Services").greeting--small.dark
+          .developer-cite__links
+            .link-more
+              a(href="/" title="branding") branding
+            .link-more
+              a(href="/" title="graphic design") graphic design
+  .job-slider.section
+
+    .container
+      .swiper.job-swiper
+
+        .swiper-wrapper
+          .swiper-slide
+            img(src="images/job-slider-img-1.jpg" alt="Book" width="1088" height="620")
+          .swiper-slide
+            img(src="images/job-slider-img-2.jpg" alt="Billboard" width="1088" height="620")
+          .swiper-slide
+            img(src="images/job-slider-img-3.jpg" alt="Pin" width="1088" height="620")
+          .swiper-slide
+            h2 Job done. Can we help your brand shift gears?
+        .swiper-pagination
+        .swiper-fraction
+          span.swiper-fraction-current
+          | &nbsp;/&nbsp;
+          span.swiper-fraction-total

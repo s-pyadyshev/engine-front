@@ -1,0 +1,35 @@
+.navbar {
+  &__link {
+    font-size: 26px;
+    line-height: 30px;
+    font-weight: 400;
+    text-decoration: none;
+
+    @include desktop {
+      font-size: 40px;
+      line-height: 52px;
+    }
+
+    &:focus,
+    &:hover,
+    &:active {
+      text-decoration: underline;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style-type: none;
+    gap: 40px;
+
+    @include laptop {
+      align-items: flex-start;
+    }
+
+    @include desktop {
+      gap: 56px;
+    }
+  }
+}

@@ -1,0 +1,90 @@
+.job-slider {
+  padding-right: 46px;
+  position: relative;
+
+  @include desktop {
+    max-width: 1920px;
+    padding-right: 0;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+
+  &.section {
+    padding-top: 75px;
+    padding-bottom: 50px;
+  }
+
+  .job-swiper {
+    overflow: visible;
+    padding-bottom: 53px;
+
+    @include desktop {
+      max-width: 1088px;
+      margin-left: 0;
+      padding-bottom: 77px;
+    }
+
+    .swiper-slide {
+      height: calc(100vw * 206 / 393);
+      max-height: 620px;
+
+      &:last-child {
+        max-width: 245px;
+        display: flex;
+        h2 {
+          margin-bottom: 0;
+          margin-top: auto;
+        }
+      }
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .swiper-pagination {
+      top: auto;
+      bottom: 35px;
+      background-color: #D3D3D3;
+
+      @include desktop {
+        bottom: 46px;
+      }
+
+      .swiper-pagination-progressbar-fill {
+        background-color: $color-primary;
+      }
+    }
+
+    .swiper-fraction {
+      font-family: $font-secondary;
+      font-size: 12px;
+      line-height: 16px;
+      font-weight: 700;
+      letter-spacing: 2.4px;
+      color: #D3D3D3;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+
+      @include desktop {
+        font-size: 16px;
+        line-height: 21px;
+        letter-spacing: 3.2px;
+      }
+
+      .swiper-fraction-current {
+        color: $color-black;
+        transition: color 0.2s;
+
+        &.disabled {
+          color: #D3D3D3;
+        }
+      }
+    }
+
+  }
+
+}

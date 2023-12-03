@@ -1,0 +1,19 @@
+extends pug/base
+
+prepend vars
+  - title = 'About us'
+
+append vars
+
+block content
+  +page-header(
+      'About us', 
+      'We’re a <span>smooth</span> running engine<span>.</span>',
+      'Engine is a creative agency based in Amsterdam, near the Westergas. Our team consists of an all-rounder, a creative genius and a design junkie. For the last decade we have been working together on inspiring, impactful and fun projects. Introducing: Daniel, Emmanuel and Irene.'
+    )
+  .container
+    +team-desc("./images/team.jpg", "Meet our pit crew", "Team Engine has been working together for years. We often only need a few words to understand each other’s ideas, but that doesn’t mean that it’s quiet at our office. At Engine, working hard equals lot’s of fun. We like to joke as much as we like to whip up stunning designs and websites. We know what to expect from one another, we do our part, and we trust the process. Like we said, we’re a smooth running engine.")
+    .card__list
+      +card-employee("Daniel Tijl", "Web developer, project manager, money guy, tennis and padel champ", "./images/person1.jpg", "./images/person1-hover.jpg", "Our all-rounder. Daniël builds and maintains websites and manages our finances. He’s basically our chef-mechanic, he keeps our engine running smoothly and makes sure we get our dose of vitamins by sharing a slice of his daily fruit. And he’s annoyingly good at table tennis. And tennis. And padel.")
+      +card-employee("Emanuel Zegeling", "Art director, project manager, graphic designer, Amsterdam expert, musician", "./images/person2.jpg","./images/person2-hover.jpg" ,"Creative genius with tons of experience. Emmanuel really knows what to do with your wishes. He would rather say yes than no to challenging deadlines, he just keeps working until it’s finished, with heart and soul. And he knows a thing or two about Amsterdam. Like, everything.").card-employee--right
+      +card-employee("Irene Flietstra", "Graphic designer, photographer, hiker, runner, nature lover", "./images/person3.jpg","./images/person3-hover.jpg" ,"Irene is our graphic designer. With an undeniable eye for detail and her innate creativity, she stuns us and our clients with her designs. She knows her Adobe-tools inside-out and is the first to learn about new features with each update. Oh, and she’s a professional photographer too. Show-off.").card-employee--centre

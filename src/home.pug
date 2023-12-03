@@ -1,0 +1,144 @@
+extends pug/base
+
+prepend vars
+  - title = 'Homepage'
+
+append vars
+
+block content
+  .hero.section
+    .container
+      +greeting("Welcome", "images/greeting-welcome.svg", "143", "60").text-center
+      .hero-slider
+        .swiper.hero-swiper
+          .swiper-wrapper
+            .swiper-slide
+              h1 We help clients
+                span
+                  |  kickstart
+                |  their brand
+                span
+                  | .
+              .hero-swiper__info
+                .hero-swiper__info-item
+                  span Client:&nbsp;
+                  span Zilter Makelaardij
+                .hero-swiper__info-item
+                  span Service:&nbsp;
+                  span Visual identity
+              .hero-swiper__img
+                img(src="images/slider-img-1.jpg" alt="Zilter Makelaardij" width="1333" height="726")
+            .swiper-slide
+              h2
+                span Tuning
+                |  your brand for maximum impact
+                span
+                  | .
+              .hero-swiper__info
+                .hero-swiper__info-item
+                    span Client:&nbsp;
+                    span Wiko Dakkapellen
+                .hero-swiper__info-item
+                  span Service:&nbsp;
+                  span Visual identity upgrade
+              .hero-swiper__img
+                img(src="images/slider-img-2.jpg" alt="Wiko Dakkapellen" width="1333" height="726")
+            .swiper-slide
+              h2 Handing the good guys
+                span
+                  |  the right tools
+                |  to win
+                span
+                  | .
+              .hero-swiper__info
+                .hero-swiper__info-item
+                  span Client:&nbsp;
+                  span Het Nederlandse Rode Kruis
+                .hero-swiper__info-item
+                  span Service:&nbsp;
+                  span Graphic design
+              .hero-swiper__img
+                img(src="images/slider-img-3.jpg" alt="Het Nederlandse Rode Kruis" width="1333" height="726")
+          .swiper-pagination
+  .promo-text.section
+    .container
+      p We’re here to fuel your brand with creative ideas and custom-built design. Is your brand ready for some much needed maintenance or to shift gears and accelerate to a higher level? Rev up your engines, we’re here to help!
+      .link-more
+        a(href="/" title="See what we do") See what we do
+  .partners.section
+    .container
+      .partners__wrapper
+        .partners__item
+          img(src="images/rode-kruis.svg" alt="Rode Kruis." width="130" height="48" loading="lazy")
+        .partners__item
+          img(src="images/kngf.svg" alt="Kngf." width="93" height="65" loading="lazy")
+        .partners__item
+          img(src="images/care.svg" alt="Care." width="150" height="48" loading="lazy")
+        .partners__item
+          img(src="images/nexios.svg" alt="Nexios." width="158" height="48" loading="lazy")
+        .partners__item
+          img(src="images/zilter.svg" alt="Zilter." width="159" height="40" loading="lazy")
+  .card-about.section.background-muted
+    .container
+      +greeting("About us").greeting--small.dark
+    .container-lg
+      .row
+        .card-about__text.col-12.col-sm-7.col-lg-5.offset-lg-1.col-xl-5.col-xxl-4.offset-xl-1
+          h2 We’re a smooth running engine
+          p Making things look good is nice, but making them look good
+            strong  and
+            |  functional is a craft. Our craft. We work hard and share lots of laughter, but above all, we create beautiful things that help our clients move forward.
+          .link-more
+            a(href="/about.html") More about us
+        .col-12.col-lg-6.col-xl-6.col-xxl-7
+          img(src="images/engine-aboutus.jpg" alt="about us." width="950" height="550" loading="lazy")
+  .company-intro.section.background-secondary
+    .container
+      .row.company-intro__wrapper
+        .col-12.col-md-6.col-xxl-7
+          +greeting("Services").greeting--small
+          h2 We approach every challenge in
+            span  true partnership
+            |  with you, so you enjoy the process just as much as the end results
+            span .
+        .col-12.col-md-4.offset-md-2.col-xxl-3
+          .company-intro__links
+            a(href="/services#branding") branding
+            a(href="/services#graphicdesign") graphic design
+            a(href="/services#webdesign") webdesign
+            a(href="/services#uxui") UX/UI
+            a(href="/services#webdev") web development
+            a(href="/services#photo") photography
+  .main-cases.section
+    .container
+      .main-cases__text
+        +greeting("Cases").greeting--small.dark
+        h2 From start to finish, we’re on the journey with you
+        p We thrive on the excitement of working alongside our clients, navigating the twists and turns of their unique challenges. Together we move toward success, fine-tuning the strategies when needed to ensure we reach the ultimate goal: a happy client.
+        .link-more
+          a(href="/" title="Explore our case studies") Explore our case studies
+      .swiper.cases-slider
+        .swiper-wrapper
+          .swiper-slide
+            a(href="/" title="Het Nederlandse Rode Kruis").card-cases
+              .card-cases__img
+                img(src="images/cases-img-1.jpg" alt="Het Nederlandse Rode Kruis" width="960" height="640")
+              .card-cases__text
+                h3 Het Nederlandse Rode Kruis
+                p Graphic design, campaign concept
+          .swiper-slide
+            a(href="/" title="WO=MEN").card-cases
+              .card-cases__img
+                img(src="images/cases-img-2.jpg" alt="WO=MEN" width="960" height="640")
+              .card-cases__text
+                h3 WO=MEN
+                p Branding, graphic design
+          .swiper-slide
+            a(href="/" title="Nexios").card-cases
+              .card-cases__img
+                img(src="images/cases-img-3.jpg" alt="Nexios" width="676" height="640")
+              .card-cases__text
+                h3 Nexios
+                p Branding, UX/UI, graphic design, photography
+        .swiper-pagination
+

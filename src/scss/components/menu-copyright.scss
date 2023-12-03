@@ -1,0 +1,34 @@
+.menu-copyright {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: $color-gray;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 175px;
+  max-width: 323px;
+
+  &--mobile {
+    margin: 175px auto 0;
+  }
+
+  @include laptop {
+    font-size: 20px;
+    line-height: 35px;
+
+    &--mobile {
+      display: none;
+    }
+  }
+
+  img {
+    width: 68px;
+    height: 40px;
+
+    @include laptop {
+      width: 80px;
+      height: 48px;
+    }
+  }
+}

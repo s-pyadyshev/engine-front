@@ -1,0 +1,53 @@
+.menu-address {
+  display: none;
+  flex-direction: column;
+  row-gap: 45px;
+  padding-top: 160px;
+  max-width: 600px;
+
+  @include laptop {
+    display: flex;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+    line-height: 35px;
+    font-weight: 400;
+    gap: 63px;
+
+    @media (min-width: 1920px) {
+      &:last-child {
+        margin-left: 130px;
+      }
+    }
+  }
+
+  &__location {
+    display: flex;
+    flex-direction: column;
+    max-width: 240px;
+
+    a {
+      text-decoration: none;
+
+      &:hover,
+      &:active {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .menu-copyright {
+    flex-direction: column;
+    margin-top: auto;
+    min-width: 228px;
+    margin-right: -35px;
+
+    @media (min-width: 1920px) {
+      margin-right: -165px;
+    }
+  }
+}

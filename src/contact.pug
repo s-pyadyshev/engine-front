@@ -1,0 +1,45 @@
+extends pug/base
+
+prepend vars
+  - title = 'Contact'
+  - bodyClass = 'header-light'
+
+
+append vars
+block content
+  +page-header(
+      'Contact',
+      'Let’s talk about it<span>.</span>'
+    ).text-center.page-header--contact
+  .feedback.section.background-muted
+    .container
+      .row.feedback__wrapper
+        .col-12.col-sm-8.offset-sm-2.col-lg-5.offset-lg-0.col-xl-4.text-center
+          p Is your brand ready for a boost, a kickstart or some much needed maintenance? We’re here to help!
+          p Fill in the form to let us know what you’re working on and would like our help with.
+        .col-12.col-lg-6.offset-lg-1.col-xl-7
+          form.row.feedback__form(action="/")
+            .col-12.col-xl-6
+              input.input.full-width(type="text" placeholder="Name*")
+            .col-12.col-xl-6
+              input.input.full-width(type="text" placeholder="Organisation")
+            .col-12.col-xl-6
+              input.input.full-width(type="email" placeholder="E-mail*")
+            .col-12.col-xl-6
+              input.input.full-width(type="tel" placeholder="Phone number*")
+            .col-12
+              textarea.textarea.full-width(placeholder="Message*")
+            .col-12
+              button.button.button--primary.full-width.text-center(type="submit") Send
+  .company-intro.company-intro--contact.section.background-secondary
+    .container
+      .row.company-intro__wrapper
+        .col-12.col-md-11
+          +greeting("We’re ready for you").greeting--small
+          h2
+            span Taking action
+            |  is the catalyst for change, the
+            span  force
+            |  that transforms ideas into reality, and the
+            span  bridge
+            |  between potential and achievement.

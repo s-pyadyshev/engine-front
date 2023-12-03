@@ -1,0 +1,136 @@
+footer {
+  background-color: $color-secondary;
+  padding: 0 0 74px 0;
+
+  .container,
+  .container-lg {
+    position: relative;
+  }
+
+  .container {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: $border-color;
+      right: 0;
+      margin: 0 auto;
+    }
+
+    @include laptop {
+      width: calc(100% - 35px);
+    }
+
+    @media (min-width: 1400px) {
+      max-width: 1365px;
+    }
+  }
+}
+
+.footer__copy {
+  padding-top: 40px;
+  padding-right: 18px;
+  padding-left: 18px;
+  border-top: solid 1px $border-color;
+
+  @include tablet {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  @include desktop {
+    padding-top: 70px;
+  }
+}
+
+.footer__copyright {
+  padding-bottom: 22px;
+  display: flex;
+  margin: 0 auto;
+  text-align: center;
+  justify-content: space-between;
+
+  @include tablet {
+    max-width: 50%;
+    justify-content: left;
+    margin: 0;
+  }
+
+  @include desktop() {
+    max-width: 50%;
+    justify-content: left;
+    margin: 0;
+  }
+}
+
+.footer__copyright-logo {
+  width: 138px;
+  height: 25px;
+  opacity: 0.5;
+  margin-right: 35px;
+
+  @include desktop {
+    margin-right: 55px;
+  }
+}
+
+.footer__copyright-text {
+  font-weight: 400;
+  font-family: $font-primary;
+  font-size: 15px;
+  color: #909090;
+}
+
+.footer__bottom-links {
+  max-width: 294px;
+  display: flex;
+  text-align: center;
+  margin: 0 auto;
+  flex-wrap: wrap;
+
+  @include tablet {
+    max-width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+  }
+}
+
+.footer__bottom-links a {
+  flex-shrink: 0;
+  font-weight: 400;
+  font-family: $font-primary;
+  font-size: 15px;
+  color: $color-white;
+  text-decoration: none;
+
+  @include tablet {
+    font-size: 15px;
+  }
+
+  @include laptop {
+    font-size: 20px;
+  }
+}
+
+.footer__bottom-links a:not(:last-child):after {
+  content: "";
+  border: solid 1px;
+  height: 15px;
+  margin-right: 16px;
+  margin-left: 16px;
+  margin-bottom: -3px;
+
+  @include tablet {
+    margin-right: 28px;
+    margin-left: 28px;
+    height: 18px;
+    margin-bottom: -4px;
+  }
+}

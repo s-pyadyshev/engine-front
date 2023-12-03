@@ -1,0 +1,41 @@
+section.section.section-services.background-secondary
+  .container
+    .section-services__tabs
+      ul.tabs(data-tabs="tabs")
+        li
+          button.button.button--inverse-primary.is-active(data-tab="branding") branding
+        li
+          button.button.button--inverse-primary(data-tab="graphicdesign") graphic design
+        li
+          button.button.button--inverse-primary(data-tab="webdesign") webdesign
+        li
+          button.button.button--inverse-primary(data-tab="uxui") UX/UI
+        li
+          button.button.button--inverse-primary(data-tab="webdev") web development
+        li
+          button.button.button--inverse-primary(data-tab="photo") photography
+  .container-lg
+    .tab-content(data-tabs-content="tabs")
+      .is-active(data-tab-content="branding")
+        .service
+          .service__content
+            h3="Branding" 
+            p=`Businesses need branding. Fact. Well considered and correct branding can set a business apart from its competitors, promote products and services in the eyes of consumers, cultivate brand loyalty to retain customers, and bolster competitive advantage in crowded markets.`
+            p="But to achieve that, branding needs to be built on individuality. So, that’s where we come in. At Engine we’re a branding agency with an ethos to take the uniqueness of every business, elevate it, and then let it communicate its value to the world."
+            h4="Related case studies:"
+            .service__footer.link-more
+              a(href="/")="Zilter Makelaardij"
+              a(href="/")="Wiko Dakkapellen"
+          .service__img-wrap
+            img(src="../../images/project3.jpg" alt="", width="", height="") 
+            a(href="/").service__link="View case study" 
+      div(data-tab-content="graphicdesign")
+        div Tab 2
+      div(data-tab-content="webdesign")
+        div Tab 3
+      div(data-tab-content="uxui")
+        div Tab 4
+      div(data-tab-content="webdev")
+        div Tab 5
+      div(data-tab-content="photo")
+        div Tab 6

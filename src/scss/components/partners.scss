@@ -1,0 +1,47 @@
+.partners {
+  background-color: $color-muted;
+
+  &.section {
+    padding: 80px 0;
+
+    @include desktop {
+      padding: 150px 0 120px 0;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    column-gap: 35px;
+    row-gap: 46px;
+
+    @media (min-width: 375px) {
+      column-gap: 60px;
+    }
+
+    @include desktop {
+      justify-content: space-between;
+    }
+
+    @media (min-width: 1920px) {
+      justify-content: flex-start;
+      column-gap: 160px;
+    }
+  }
+
+  &__item {
+    height: 43px;
+    width: 105px;
+
+    @include desktop {
+      height: 65px;
+      width: auto;
+    }
+
+    img {
+      height: 100%;
+    }
+  }
+}

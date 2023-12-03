@@ -1,0 +1,14 @@
+mixin contact(desc, link, number, email)
+  .contact
+    if desc
+      .contact__message
+        h2 Ready to start <span>your</span> engine?
+        p=desc
+        a(href="/")=link
+    .contact__links
+      .contact__link-number
+        h3 Call us:
+        a(href=`tel:+${number}`)=number
+      .contact__link-email
+        h3 E-mail us:
+        a(href=`mailto:${email}`)=email

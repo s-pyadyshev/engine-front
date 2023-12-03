@@ -1,0 +1,11 @@
+mixin card-employee(name, achievements, img, img2, desc)
+  .card-employee(class!=attributes.class)
+    .card-employee__name 
+      span=name 
+      span=achievements
+    .test
+      .test1
+        img(src=`${img}`, alt="", width="", height="").card-employee__img
+      .test2
+        img(src=`${img2}`, alt="", width="", height="").card-employee__img-hover
+    p=desc 

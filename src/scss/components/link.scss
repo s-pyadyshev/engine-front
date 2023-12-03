@@ -1,0 +1,26 @@
+.link-more {
+  a {
+    position: relative;
+    z-index: 1;
+
+    &:hover,
+    &:active {
+      &::before {
+        opacity: 1;
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -4px;
+      left: 5%;
+      width: 90%;
+      height: calc(100% + 10px);
+      background-color: $color-primary;
+      opacity: 0;
+      z-index: -1;
+      transition: opacity $transition-duration;
+    }
+  }
+}

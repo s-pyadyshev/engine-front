@@ -1,0 +1,11 @@
+.section-services__tabs {
+  margin-bottom: 50px;
+}
+
+.section-services__tabs ul {
+
+  @include desktop {
+    justify-content: center;
+  }
+  
+}
