@@ -19,6 +19,11 @@
   }
 
   .greeting {
+    span {
+      font-weight: 400;
+      color: $color-black;
+    }
+
     @include laptop {
       margin-bottom: 90px;
     }

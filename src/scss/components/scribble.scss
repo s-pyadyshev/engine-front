@@ -1,0 +1,31 @@
+.scribble {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 24px;
+  margin: -12px -24px;
+
+  svg {
+    position: absolute;
+    width: max-content;
+    height: max-content;
+    stroke: #d5df25;
+
+    path {
+      stroke-dashoffset: 560px;
+      stroke-dasharray: 560px;
+      transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0s;
+      transition-delay: 1s;
+      transition-duration: 1.5s;
+    }
+  }
+
+  .animate__animated {
+    opacity: 1;
+
+    path {
+      stroke-dashoffset: 0;
+    }
+  }
+}

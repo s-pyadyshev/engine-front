@@ -193,26 +193,6 @@ $button-color-active: $color-white;
     &:hover,
     &:active {
       background-color: $color-primary;
-  }
-
-    &::after,
-    &::before {
-      content: '';
-      width: 23px;
-      height: 5px;
-      background-color: $color-secondary;
-      border-radius: 3px;
-      position: absolute;
-      top: 50%;
-      left: 0;
-      transition: background-color $transition-duration;
-    }
-
-    &::after {
-      transform: translate(9px, -49%) rotate(-45deg);
-    }
-    &::before {
-      transform: translate(23px, -49%) rotate(45deg);
     }
   }
 }

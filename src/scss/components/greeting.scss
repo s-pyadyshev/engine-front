@@ -1,56 +1,53 @@
 .greeting {
-  font-size: 15px;
-  line-height: 19px;
-  font-weight: 400;
-  color: $color-white;
-  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
 
-  @include laptop {
-    font-size: 29px;
-    line-height: 37px;
-    margin-bottom: 40px;
+  div {
+    position: absolute;
+  }
+
+  h1 {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-family: $font-primary;
+    font-size: 15px;
+    line-height: 1.6;
+    font-weight: 300;
+
+    @include laptop {
+      font-size: 30px;
+      margin-bottom: 48px;
+    }
+
+    span {
+      font-weight: 400;
+      color: $color-white;
+    }
   }
 
   &--small {
+    justify-content: flex-start;
+    margin-bottom: 24px;
+
     @include laptop {
-      font-size: 20px;
-      line-height: 23px;
+      margin-bottom: 56px;
+    }
+
+    h1 {
+      margin-bottom: 0 !important;
+
+      @include laptop {
+        font-size: 20px;
+        line-height: 23px;
+      }
     }
   }
 
   &.dark {
-    color: $color-secondary;
-  }
-
-  span {
-    position: relative;
-    padding: 0;
-
-    @include laptop {
-      padding: 15px;
+    span {
+      color: $color-secondary;
     }
   }
-
-  svg {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 2px;
-  }
-}
-
-[data-inview="strokeDashRevertBig"].is-in-view {
-  stroke-dashoffset: 0;
-
-  path {
-    fill: #d8ff01;
-  }
-}
-
-[data-inview="strokeDashRevertBig"] {
-  stroke-dasharray: 1400px;
-  stroke-dashoffset: 1400px;
-  transition: stroke-dashoffset 1s cubic-bezier(0.215, 0.61, 0.355, 1) 1s;
-  transition-delay: 1s;
-  transition-duration: 1.5s;
 }

@@ -5,6 +5,10 @@
   }
 }
 
+[data-scrollspy] {
+  opacity: 0;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -22,7 +26,7 @@
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translate3d(0, 75%, 0);
+    transform: translate3d(0, 100px, 0);
   }
 
   to {
@@ -38,7 +42,7 @@
 @keyframes fadeInDown {
   from {
     opacity: 0;
-    transform: translate3d(0, -25%, 0);
+    transform: translate3d(0, -100px, 0);
   }
 
   to {
@@ -54,7 +58,7 @@
 @keyframes fadeInRight {
   0% {
     opacity: 0;
-    transform: translate3d(100%, 0, 0);
+    transform: translate3d(100px, 0, 0);
   }
 
   to {
@@ -70,7 +74,7 @@
 @keyframes fadeInLeft {
   0% {
     opacity: 0;
-    transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100px, 0, 0);
   }
 
   to {

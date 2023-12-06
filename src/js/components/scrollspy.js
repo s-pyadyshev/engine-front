@@ -1,11 +1,13 @@
-import { throttle, isElementCompletelyInViewport } from "../helpers";
+import { throttle, isElementInViewport } from "../helpers";
 
 const applyScrollspyClasses = (elements) => {
   elements.forEach((element) => {
-    if (isElementCompletelyInViewport(element)) {
+    if (isElementInViewport(element)) {
       const animationClass = element.dataset.scrollspy;
       element.classList.add("animate__animated");
-      element.classList.add(animationClass);
+      if (animationClass) {
+        element.classList.add(animationClass);
+      }
     }
   });
 };

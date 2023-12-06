@@ -2,10 +2,6 @@ export const permutation = (() => {
   const init = () => {
     const textBlock = document.querySelector(".main-cases__text");
 
-    if (!textBlock.length) {
-      return;
-    }
-
     const swiperWrapper = document.querySelector(
       ".cases-slider .swiper-wrapper"
     );

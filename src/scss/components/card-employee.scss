@@ -1,5 +1,4 @@
 .card__list {
-
   display: flex;
   flex-direction: column;
   gap: 50px;
@@ -12,11 +11,9 @@
   @include desktop {
     padding-bottom: 108px;
   }
-
 }
 
 .card-employee--right {
-
   &.card-employee {
     @include tablet {
       display: flex;
@@ -134,7 +131,6 @@
 }
 
 .card-employee--centre {
-
   .card-employee__name {
     display: flex;
     flex-direction: row;
@@ -285,7 +281,6 @@
   font-weight: 700;
 
   @include tablet {
-    padding: 0;
     width: 100%;
   }
 
@@ -324,41 +319,23 @@
   }
 }
 
-.card-employee__img {
-  max-width: 222px;
-  min-height: 236px;
-  margin: 0 auto;
-  padding-bottom: 30px;
-
-  @include tablet {
-    order: -1;
-    padding: 0;
-    margin: 0;
-  }
-
-  @include desktop {
-    min-width: 400px;
-    max-height: 400px;
-  }
-}
-
-.test {
+.card-employee__photo-wrap {
   &:hover {
-    .test1 {
+    .card-employee__photo {
       display: none;
     }
 
-    .test2 {
+    .card-employee__photo-hover {
       display: block;
     }
   }
 }
 
-.test2 {
+.card-employee__photo-hover {
   display: none;
 }
 
-.card-employee__img-hover {
+.card-employee__photo-wrap img {
   max-width: 222px;
   min-height: 236px;
   margin: 0 auto;

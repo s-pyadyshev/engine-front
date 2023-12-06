@@ -3,6 +3,10 @@
   padding-bottom: 50px;
   text-align: center;
 
+  // @include laptop {
+  //   min-height: 694px;
+  // }
+
   &--contact {
     background-color: $color-muted;
     color: $color-secondary;
@@ -23,15 +27,31 @@
     }
   }
 
-  h2 {
+  h1 {
     font-family: $font-primary;
     font-weight: 300;
     font-size: 16px;
+    line-height: 1.6;
     margin-bottom: 60px;
+    position: relative;
+    padding: 12px 24px;
+    width: 100%;
+    min-height: 80px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
 
     @include laptop {
       font-size: 30px;
       margin-bottom: 48px;
+    }
+
+    &:only-child {
+      margin-bottom: 0;
+    }
+
+    span {
+      color: $color-white;
     }
   }
 
@@ -52,11 +72,27 @@
   }
 
   p {
-    max-width: 812px;
+    max-width: 765px;
     margin-right: auto;
     margin-left: auto;
     font-size: 16px;
-    line-height: 30px;
+    line-height: 1.75;
+
+    @include laptop {
+      font-size: 20px;
+    }
+  }
+
+  .scribble {
+    svg {
+      transform: scale(0.6) translate(0px, -1%);
+      max-width: calc(100% + 40px);
+
+      @include laptop {
+        transform: none;
+        max-width: 100%;
+      }
+    }
   }
 }
 
@@ -66,6 +102,10 @@
 
   @include laptop {
     margin-bottom: 0;
+  }
+
+  h1 {
+    justify-content: flex-start;
   }
 
   h2 {

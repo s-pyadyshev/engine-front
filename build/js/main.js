@@ -288,9 +288,6 @@ __webpack_require__.r(__webpack_exports__);
 var permutation = function () {
   var init = function init() {
     var textBlock = document.querySelector(".main-cases__text");
-    if (!textBlock.length) {
-      return;
-    }
     var swiperWrapper = document.querySelector(".cases-slider .swiper-wrapper");
     var firstPlace = document.querySelector(".main-cases .container");
     if (!textBlock) {
@@ -330,10 +327,12 @@ __webpack_require__.r(__webpack_exports__);
 
 var applyScrollspyClasses = function applyScrollspyClasses(elements) {
   elements.forEach(function (element) {
-    if ((0,_helpers__WEBPACK_IMPORTED_MODULE_0__.isElementCompletelyInViewport)(element)) {
+    if ((0,_helpers__WEBPACK_IMPORTED_MODULE_0__.isElementInViewport)(element)) {
       var animationClass = element.dataset.scrollspy;
       element.classList.add("animate__animated");
-      element.classList.add(animationClass);
+      if (animationClass) {
+        element.classList.add(animationClass);
+      }
     }
   });
 };

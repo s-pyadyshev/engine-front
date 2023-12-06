@@ -2,6 +2,14 @@ footer {
   background-color: $color-secondary;
   padding: 0 0 74px 0;
 
+  a {
+    &:focus,
+    &:hover,
+    &:active {
+      color: $color-primary;
+    }
+  }
+
   .container,
   .container-lg {
     position: relative;
@@ -121,7 +129,7 @@ footer {
 
 .footer__bottom-links a:not(:last-child):after {
   content: "";
-  border: solid 1px;
+  border: solid 1px $color-white;
   height: 15px;
   margin-right: 16px;
   margin-left: 16px;

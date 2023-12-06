@@ -1,8 +1,8 @@
 - var loading = typeof loading !== 'undefined' ? loading : null
 
-mixin project(img, logo, title, desc, loading)
+mixin project(img, logo, title, desc, animation)
   .project(class!=attributes.class)
-    img.project__header-img(src=`${img}`, alt="img", height="" , width="" loading=loading)
+    img.project__header-img(src=`${img}`, alt="img", height="" , width="" data-scrollspy=animation)
     .project__wrapper
       img.project__logo(src=`${logo}`, alt="logo", height="" , width="")
       .project__info
