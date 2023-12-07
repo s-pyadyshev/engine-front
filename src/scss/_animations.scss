@@ -86,20 +86,3 @@
 .animate__fadeInLeft {
   animation-name: fadeInLeft;
 }
-
-@keyframes displayIn {
-  from {
-    display: none;
-    opacity: 0;
-  }
-
-  to {
-    display: block;
-    opacity: 1;
-  }
-}
-
-.animate__displayIn {
-  animation-name: displayIn;
-  animation-duration: 0s;
-}

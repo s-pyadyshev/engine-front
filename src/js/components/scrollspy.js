@@ -26,7 +26,7 @@ export const scrollspy = (function () {
       "scroll",
       throttle(() => {
         applyScrollspyClasses(scrollspyElements);
-      }, 100)
+      }, 500)
     );
   };
 

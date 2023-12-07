@@ -13,3 +13,15 @@
     padding-left: $container-padding-x * 2;
   }
 }
+
+.container,
+.container-sm,
+.container-md {
+  @media (min-width: 576px) {
+    max-width: 920px;
+  }
+
+  @media (min-width: 768px) {
+    max-width: 920px;
+  }
+}

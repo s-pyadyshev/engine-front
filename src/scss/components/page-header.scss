@@ -1,13 +1,12 @@
 .page-header {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 25px;
   text-align: center;
 
-  // @include laptop {
-  //   min-height: 694px;
-  // }
+  @include laptop {
+    padding-bottom: 50px;
+  }
 
-  &--contact {
+  &.page-header--contact {
     background-color: $color-muted;
     color: $color-secondary;
     padding-bottom: 30px;
@@ -16,6 +15,7 @@
       padding-top: 50px;
       padding-bottom: 100px;
     }
+
     .page-header__text {
       h3 {
         margin-bottom: 0;
@@ -25,6 +25,11 @@
     + .section {
       padding-top: 0;
     }
+
+    h1 span {
+      font-weight: 400;
+      color: $color-black;
+    }
   }
 
   h1 {
@@ -32,11 +37,10 @@
     font-weight: 300;
     font-size: 16px;
     line-height: 1.6;
+    padding: 8px 0;
     margin-bottom: 60px;
     position: relative;
-    padding: 12px 24px;
     width: 100%;
-    min-height: 80px;
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -44,6 +48,7 @@
     @include laptop {
       font-size: 30px;
       margin-bottom: 48px;
+      min-height: 80px;
     }
 
     &:only-child {

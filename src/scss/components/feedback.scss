@@ -1,5 +1,4 @@
 .feedback {
-
   &.section {
     padding-bottom: 70px;
 
@@ -31,6 +30,7 @@
 
   p {
     line-height: 30px;
+    line-height: 1.7;
     color: $color-black;
 
     &:last-child {
@@ -69,12 +69,12 @@
       color: $color-white;
       border: none;
       border-radius: 0;
-      border-bottom: 2px solid white;
+      border-bottom: 2px solid $color-white;
       transition-property: border-color, color;
 
+      &:focus,
       &:hover,
-      &:active,
-      &:focus {
+      &:active {
         color: $color-primary;
         border-color: $color-primary;
       }

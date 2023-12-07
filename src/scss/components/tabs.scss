@@ -10,6 +10,7 @@ $tab-border-color: $color-secondary;
 
   .button {
     font-family: $font-primary;
+    letter-spacing: 0.3px;
 
     &.is-active {
       background-color: $tab-active-background-color;
@@ -36,6 +37,10 @@ $tab-border-color: $color-secondary;
         color: $color-primary;
         text-decoration: underline;
       }
+    }
+
+    @include desktop {
+      font-size: 26px;
     }
   }
 }

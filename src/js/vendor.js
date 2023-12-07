@@ -1,1 +1,1 @@
-require("./vendor/fancyselect");
+
