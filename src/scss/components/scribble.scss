@@ -16,12 +16,13 @@
       stroke-dashoffset: 700px;
       stroke-dasharray: 700px;
       transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0s;
-      transition-delay: 1s;
+      transition-delay: 0.3s;
       transition-duration: 1.5s;
     }
   }
 
-  .animate__animated {
+  .animate__animated,
+  .mobile-menu-active & {
     opacity: 1;
 
     path {
