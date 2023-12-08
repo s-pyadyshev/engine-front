@@ -7271,7 +7271,7 @@ footer .container::before {
   }
 
   .main-cases__text {
-    padding: 100px;
+    padding: 100px 100px 50px 100px;
   }
 
   .card-cases p {
