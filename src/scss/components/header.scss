@@ -9,7 +9,7 @@ $mobile-menu-background-color: $color-primary;
   align-items: center;
   padding-top: 38px;
   padding-bottom: 38px;
-  position: sticky;
+  position: fixed;
   background-color: $color-secondary;
 
   &::before {
