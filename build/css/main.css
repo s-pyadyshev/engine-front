@@ -1753,6 +1753,7 @@ body {
 
 .page-wrapper {
   overflow: hidden;
+  padding-top: 131px;
 }
 
 a,
@@ -5989,6 +5990,10 @@ footer .container::before {
 @media (min-width: 1025px) {
   html {
     font-size: 20px;
+  }
+
+  .page-wrapper {
+    padding-top: 160px;
   }
 
   a {
