@@ -5,6 +5,7 @@ export const permutation = (() => {
     const swiperWrapper = document.querySelector(
       ".cases-slider .swiper-wrapper"
     );
+
     const firstPlace = document.querySelector(".main-cases .container");
 
     if (!textBlock) {
