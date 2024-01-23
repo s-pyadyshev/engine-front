@@ -26,11 +26,6 @@ body {
 
 .page-wrapper {
   overflow: hidden;
-  padding-top: 131px;
-
-  @include laptop {
-    padding-top: 160px;
-  }
 }
 
 a,

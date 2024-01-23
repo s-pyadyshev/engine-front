@@ -14,18 +14,24 @@
 
 .service__content {
   background-color: $color-muted;
-  padding: 40px 0 46px 33px;
+  padding: 40px 31px 46px 31px;
   margin-bottom: 30px;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   @include laptop {
     width: 50%;
     margin: 0;
-    padding: 70px 0 57px 33px;
+    padding: 70px 31px 57px 31px;
   }
 
   @include desktop {
     margin: 0;
-    padding: 70px 0 67px 60px;
+    padding: 66px 65px 60px 65px;
+  }
+
+  @include desktop-l {
+    padding: 66px 136px 60px 65px;
   }
 }
 
@@ -34,14 +40,14 @@
   font-family: $font-secondary;
   font-weight: 700;
   font-size: 27px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 
   @include laptop {
-    margin-bottom: 30px;
+    margin-bottom: 0px;
   }
 
   @include desktop {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     font-size: 40px;
   }
 }
@@ -53,13 +59,12 @@
   width: 100%;
 
   @include tablet {
-    max-width: 500px;
     font-size: 20px;
   }
 
   @include desktop {
     font-size: 20px;
-    max-width: 604px;
+    margin-bottom: 36px;
   }
 }
 
@@ -74,6 +79,7 @@
   color: $color-black;
   font-weight: 700;
   font-size: 18px;
+  margin-top: auto;
   margin-bottom: 20px;
 
   @include tablet {
@@ -82,7 +88,6 @@
 
   @include desktop {
     font-size: 26px;
-    margin-top: 116px;
     margin-bottom: 38px;
   }
 }
@@ -90,6 +95,7 @@
 .service__footer {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 20px;
 
   @include tablet {
@@ -102,11 +108,12 @@
   }
 
   @include desktop {
-    gap: 49px;
+    gap: 50px;
   }
 }
 
-.service__footer a {
+.service__footer a,
+.service__footer button {
   font-weight: 400;
   font-size: 14px;
   color: $color-secondary;
@@ -181,6 +188,11 @@
     width: 50%;
     max-height: 100%;
   }
+
+  > div,
+  > div > div {
+    height: 100%;
+  }
 }
 
 .section.company-intro {
@@ -189,7 +201,7 @@
   }
 
   @include desktop {
-    padding-top: 200px;
+    padding-top: 224px;
   }
 }
 
@@ -198,3 +210,13 @@
     color: $color-primary;
   }
 }
+
+// .service__poster-icon img {
+//   height: 50%;
+//   width: 50%;
+
+//   @include desktop-sm {
+//     height: 100%;
+//     width: 100%;
+//   }
+// }

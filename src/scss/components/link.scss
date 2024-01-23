@@ -1,12 +1,19 @@
 .link-more {
-  a {
+  a,
+  button {
     position: relative;
     z-index: 1;
+    background: none;
+    border: 0;
+    padding: 0;
 
+    &:focus,
     &:hover,
-    &:active {
+    &:active,
+    &.is-active {
       &::before {
         opacity: 1;
+        background-position: left bottom;
       }
     }
 
@@ -14,13 +21,22 @@
       content: "";
       position: absolute;
       top: -4px;
-      left: 5%;
+      left: -1%;
       width: 90%;
       height: calc(100% + 10px);
       background-color: $color-primary;
       opacity: 0;
       z-index: -1;
-      transition: opacity $transition-duration;
+
+      background: linear-gradient(
+        to right,
+        $color-primary 50%,
+        transparent 50%
+      );
+      background-size: 200% 100%;
+      background-position: right bottom;
+      margin-left: 10px;
+      transition: all 1s ease;
     }
   }
 }

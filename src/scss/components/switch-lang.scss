@@ -11,7 +11,7 @@
     font-weight: 300;
     letter-spacing: 0.2px;
     text-decoration-color: transparent;
-    transition: color $transition-duration;
+    transition: color text-decoration-color $transition-duration;
 
     @include laptop {
       font-size: 15px;
@@ -20,7 +20,8 @@
 
     &.focus,
     &:active,
-    &:hover {
+    &:hover,
+    &.active {
       color: $color-primary;
       text-decoration-color: $color-primary;
     }
@@ -33,7 +34,8 @@
     &__link {
       &.focus,
       &:active,
-      &:hover {
+      &:hover,
+      &.active {
         color: $color-secondary;
         text-decoration-color: $color-secondary;
       }

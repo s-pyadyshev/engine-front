@@ -2,7 +2,8 @@
 
 mixin project(img, logo, title, desc, animation)
   .project(class!=attributes.class)
-    img.project__header-img(src=`${img}`, alt="img", height="" , width="" data-scrollspy=animation)
+    .project__header-img(data-scrollspy=animation)
+      img(src=`${img}`, alt="img", height="" , width="")
     .project__wrapper
       img.project__logo(src=`${logo}`, alt="logo", height="" , width="")
       .project__info

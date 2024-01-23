@@ -24,5 +24,15 @@
     @include laptop {
       padding-left: 138px;
     }
+
+    @include desktop-sm {
+      padding-left: 110px;
+      font-size: 17px;
+
+    }
+    @include desktop {
+      padding-left: 138px;
+      font-size: 20px;
+    }
   }
 }

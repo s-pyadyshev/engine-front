@@ -59,6 +59,18 @@
     background-repeat: no-repeat;
     pointer-events: none;
 
+    @include desktop-sm {
+      width: 120px;
+      height: 120px;
+      transform: translate(34%, 50%);
+      background-size: contain;
+    }
+
+    @include desktop {
+      width: 170px;
+      height: 170px;
+      transform: translate(-64%, 58%);
+    }
     @media (min-width: 575px) {
       bottom: 367px;
     }
@@ -117,11 +129,11 @@
       left: auto;
       width: auto;
       bottom: auto;
-      top: 173px;
+      top: 175px;
     }
 
     @include desktop {
-      top: 254px;
+      top: 258px;
     }
 
     .swiper-pagination-bullet {
@@ -194,14 +206,25 @@
         margin-bottom: 18px;
         padding-right: 100px;
       }
+      @include desktop-sm {
+        padding-right: 0;
+      }
 
       @include desktop {
         font-size: 18px;
         line-height: 23px;
+        padding-right: 100px;
       }
 
       & span:last-child {
         font-weight: 700;
+        @include desktop-sm {
+          font-size: 13px;
+        }
+
+        @include desktop {
+          font-size: 16px;
+        }
       }
     }
 
@@ -211,6 +234,13 @@
 
         @include laptop {
           display: inline;
+        }
+
+        @include desktop-sm {
+          font-size: 13px;
+        }
+        @include desktop {
+          font-size: 20px;
         }
       }
     }
@@ -310,6 +340,18 @@
     }
   }
 
+  h1 {
+    @include desktop-sm {
+      font-size: 36px;
+      min-height: 84px;
+    }
+    @include desktop {
+      min-height: 105px;
+      font-size: 55px;
+      margin-bottom: 120px;
+    }
+  }
+
   h2 {
     font-size: 27px;
     line-height: 35px;
@@ -320,9 +362,13 @@
       color: $color-primary;
     }
 
+    @include desktop-sm {
+      margin-bottom: 24px;
+    }
     @include desktop {
       font-size: 55px;
       line-height: 71px;
+      margin-bottom: 0px;
     }
   }
 }

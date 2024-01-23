@@ -27,7 +27,7 @@
   }
 
   @include laptop {
-    gap: 40px;
+    gap: 20px;
   }
 
   @media (min-width: 1200px) {
@@ -35,13 +35,13 @@
   }
 
   @include desktop {
-    gap: 40px;
+    gap: 20px;
     max-height: 400px;
   }
 
   @media (min-width: 1640px) {
+    gap: 40px;
     min-height: 236px;
-    gap: 90px;
   }
 }
 
@@ -49,7 +49,7 @@
   font-family: $font-secondary;
   display: flex;
   flex-direction: row;
-  gap: 45px;
+  gap: 25px;
   padding-bottom: 25px;
   justify-content: center;
   align-items: flex-start;
@@ -83,7 +83,7 @@
   }
 
   @include desktop {
-    font-size: 23px;
+    font-size: 27px;
   }
 }
 
@@ -141,17 +141,23 @@
 
   &:hover {
     .card-employee__photo {
-      display: none;
+      @include laptop {
+        display: none;
+      }
     }
 
     .card-employee__photo-hover {
-      display: block;
+      @include laptop {
+        display: block;
+      }
     }
   }
 }
 
 .card-employee__photo-hover {
-  display: none;
+  @include laptop {
+    display: none;
+  }
 }
 
 .card-employee p {
@@ -177,6 +183,9 @@
 
   @include desktop {
     font-size: 20px;
+    line-height: 35px;
+    padding: 5px 37px;
+    max-width: 36%;
   }
 }
 
@@ -187,6 +196,14 @@
       flex-direction: row-reverse;
       padding-right: 0;
       padding-left: 20px;
+    }
+
+    @include desktop {
+      padding-left: 20px;
+    }
+
+    @include desktop-l {
+      padding-left: 80px;
     }
   }
 
@@ -216,12 +233,27 @@
       flex-direction: column;
       flex-wrap: wrap;
       gap: 40px;
-      padding-right: 0;
+      padding: 0;
       align-items: flex-start;
     }
 
     @media (min-width: 1640px) {
+      padding: 20px;
       gap: 62px;
+    }
+
+    .scribble {
+      @include tablet {
+        padding: 12px 24px 12px 12px;
+      }
+      @include desktop-sm {
+        font-size: 26px;
+        margin-top: 12px;
+      }
+
+      @include desktop {
+        font-size: 26px;
+      }
     }
   }
 
@@ -235,11 +267,12 @@
       text-align: left;
       margin-left: 0;
       min-width: 175px;
-      padding-right: 30px;
+      padding-right: 6px;
     }
 
     @include desktop {
       text-align: left;
+      padding-right: 30px;
     }
   }
 
@@ -261,6 +294,7 @@
 
     @include desktop {
       font-size: 20px;
+      padding: 0px 18px;
     }
 
     @media (min-width: 1640px) {
@@ -318,6 +352,7 @@
       justify-content: center;
       text-align: left;
       align-items: flex-start;
+      padding-right: 20px;
     }
 
     @include desktop {
@@ -340,7 +375,7 @@
     }
 
     @include desktop {
-      font-size: 23px;
+      font-size: 26px;
     }
   }
 
@@ -371,5 +406,49 @@
       min-width: 100%;
       font-size: 22px;
     }
+  }
+}
+
+.card-employee--center .card-employee__name,
+.card-employee--first .card-employee__name {
+  @include desktop {
+    max-width: 20%;
+    margin-left: 0;
+  }
+}
+
+.card-employee--first .scribble {
+  margin-left: 9px;
+}
+
+.card-employee--first .card-employee__name .scribble,
+.card-employee--right .card-employee__name .scribble {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-employee--first .card-employee__name {
+  justify-content: space-between;
+  @include laptop {
+    justify-content: space-around;
+  }
+}
+
+.card-employee--first .card-employee__name {
+  @include tablet {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.card-employee--right .card-employee__name .scribble {
+  @include laptop {
+    font-size: 18px !important;
+  }
+  @include desktop {
+    font-size: 20px !important;
+  }
+  @include desktop-l {
+    font-size: 26px !important;
   }
 }

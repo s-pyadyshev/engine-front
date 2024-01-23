@@ -7,6 +7,6 @@ mixin card-employee(name, achievements, img, img2, desc, svg)
     .card-employee__photo-wrap
       .card-employee__photo
         img(src=`${img}`, alt="", width="", height="")
-      .card-employee__photo-hover
+      .card-employee__photo-hover.is-hidden
         img(src=`${img2}`, alt="", width="", height="")
     p=desc 

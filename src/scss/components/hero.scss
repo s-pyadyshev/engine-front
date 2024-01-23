@@ -2,11 +2,14 @@
   position: relative;
 
   &.section {
+    margin-top: -30px;
+    padding-top: 0;
     padding-bottom: 0;
-    padding-top: 10px;
-
+    @include desktop-sm {
+      margin-top: -14px;
+    }
     @include desktop {
-      padding-top: 50px;
+      margin-top: -30px;
     }
   }
 
@@ -20,7 +23,10 @@
     @include laptop {
       padding-top: 194px;
     }
-
+    
+    @include desktop-sm {
+      padding-top: 350px;
+    }
     @media (min-width: 1200px) {
       padding-top: 312px;
     }

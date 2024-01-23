@@ -1,9 +1,9 @@
 import Swiper from "swiper";
-import { Pagination } from "swiper/modules";
+import {Autoplay, Pagination } from "swiper/modules";
 export const heroSlider = (function () {
   const init = function () {
     const heroSwiper = new Swiper(".hero-swiper", {
-      modules: [Pagination],
+      modules: [Autoplay, Pagination],
       spaceBetween: 20,
       slidesPerView: "auto",
       followFinger: false,
@@ -18,6 +18,9 @@ export const heroSlider = (function () {
         clickable: "true",
         type: "bullets",
         bulletElement: "button"
+      },
+      autoplay: {
+        delay: 4000,
       },
     });
     heroSwiper.on("click", function () {

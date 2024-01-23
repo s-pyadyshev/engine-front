@@ -12,10 +12,6 @@ export const accordion = (() => {
         ".accordion__content"
       );
       accordionItem.classList.toggle("active");
-      // const isExpanded =
-      //   accordionButton.getAttribute("aria-expanded") === "true";
-      // const target = accordionButton.parentElement.nextElementSibling;
-      // accordionButton.setAttribute("aria-expanded", !isExpanded);
 
       if (accordionItem.classList.contains("active")) {
         accordionContent.style.maxHeight = accordionContent.scrollHeight + "px";
