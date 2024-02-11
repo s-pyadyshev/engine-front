@@ -59,49 +59,37 @@
     background-repeat: no-repeat;
     pointer-events: none;
 
-    @include desktop-sm {
-      width: 120px;
-      height: 120px;
-      transform: translate(34%, 50%);
-      background-size: contain;
-    }
-
-    @include desktop {
-      width: 170px;
-      height: 170px;
-      transform: translate(-64%, 58%);
-    }
     @media (min-width: 575px) {
       bottom: 367px;
     }
 
     @include tablet {
-      bottom: 405px;
-    }
-
-    @media (min-width: 992px) {
-      width: 170px;
-      height: 170px;
-      bottom: 514px;
+      width: 120px;
+      height: 120px;
+      bottom: auto;
+      top: 20px;
     }
 
     @include laptop {
       bottom: 460px;
-      transform: translate(-50%, 50%);
+      transform: translate(-50%, 90%);
     }
 
     @media (min-width: 1200px) {
+      transform: translate(-25%, 80%);
       bottom: 578px;
     }
 
-    @include desktop {
-      bottom: calc(
-        calc(567px + (726 - 578) * ((100vw - 1360px) / (1920 - 1360)))
-      );
+    @include desktop-sm {
+      transform: translate(-25%, 70%);
+      background-size: contain;
     }
 
-    @media (min-width: 1920px) {
-      bottom: 726px;
+    @include desktop {
+      width: 167px;
+      height: 167px;
+      bottom: 0;
+      transform: translate(-65%, 105%);
     }
   }
 

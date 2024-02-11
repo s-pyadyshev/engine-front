@@ -26,11 +26,7 @@
 
   h2 {
     color: $color-white;
-    margin-bottom: 40px;
-
-    @include tablet {
-      margin-bottom: 0;
-    }
+    margin-bottom: 0;
 
     span {
       color: $color-primary;

@@ -48,6 +48,7 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 0;
 
     @include laptop {
       font-size: 30px;
@@ -61,7 +62,7 @@
 
     @include desktop {
       font-size: 28px;
-      padding: 40px;
+      padding: 40px 0;
     }
 
     &:only-child {
@@ -83,6 +84,7 @@
     @include laptop {
       font-size: 55px;
       line-height: 71px;
+      padding-left: 0;
     }
 
     span {
@@ -123,7 +125,9 @@
   }
 
   h1 {
-    justify-content: flex-start;
+    @include laptop {
+      justify-content: flex-start;
+    }
   }
 
   h2 {
@@ -132,9 +136,21 @@
     }
   }
 
+  h3 {
+    text-align: center;
+
+    @include laptop {
+      text-align: left;
+    }
+  }
+
   p {
-    font-size: 20px;
+    font-size: 16px;
     line-height: 1.7;
+
+    @include laptop {
+      font-size: 20px;
+    }
   }
 
   img {
@@ -153,9 +169,12 @@
   }
 
   .page-header__text {
-    display: inline-block;
+    display: block;
+    margin: 0 auto;
 
     @include laptop {
+      display: inline-block;
+      margin: 0;
       max-width: 49%;
       padding-right: 130px;
     }

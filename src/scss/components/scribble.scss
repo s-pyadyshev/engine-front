@@ -9,8 +9,12 @@
   svg {
     position: absolute;
     width: max-content;
-    height: max-content;
+    height: 100%;
     stroke: #d5df25;
+
+    @include desktop {
+      height: max-content;
+    }
 
     path {
       stroke-dashoffset: 700px;

@@ -1,5 +1,4 @@
 .main-cases {
-
   .container {
     @include laptop {
       padding: 0;
@@ -17,6 +16,9 @@
   }
 
   &__text {
+    @include tablet {
+      max-width: 650px;
+    }
 
     @include laptop {
       grid-column: 1 / 2;
@@ -74,7 +76,6 @@
     }
 
     .swiper-wrapper {
-
       @include laptop {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -91,7 +92,6 @@
         }
       }
       .card-cases {
-
         @include laptop {
           height: calc(100vw * 640 / 1920);
           max-height: 640px;
@@ -108,8 +108,6 @@
           }
         }
       }
-
-
     }
 
     .swiper-pagination {

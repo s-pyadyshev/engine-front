@@ -14,9 +14,13 @@
   }
 
   p {
-    max-width: 820px;
+    max-width: 650px;
     line-height: 1.7;
     margin-bottom: 30px;
+
+    @include laptop {
+      max-width: 820px;
+    }
   }
 
   p,
@@ -28,7 +32,6 @@
     @include desktop-sm {
       padding-left: 110px;
       font-size: 17px;
-
     }
     @include desktop {
       padding-left: 138px;

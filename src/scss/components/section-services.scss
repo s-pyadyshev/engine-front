@@ -99,7 +99,12 @@
 }
 
 .link-more-playing {
+  display: none;
   flex-shrink: 0;
+
+  @include tablet {
+    display: block;
+  }
 }
 
 .link-more-playing p {

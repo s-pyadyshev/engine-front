@@ -38,7 +38,7 @@
     display: flex;
     flex-direction: column;
     max-width: 240px;
-    
+
     @include desktop-sm {
       margin-left: 77px;
     }
@@ -68,9 +68,8 @@
 }
 
 .menu-address__item img {
-    object-fit: contain;
-  }
-
+  object-fit: cover;
+}
 
 .menu-address__item:first-child img {
   @include desktop-sm {
@@ -87,11 +86,9 @@
   @include desktop-sm {
     width: 230px;
     height: 260px;
-  
   }
   @include desktop {
     width: 245px;
-   
   }
 }
 
@@ -108,4 +105,3 @@
     margin-top: 0px;
   }
 }
-

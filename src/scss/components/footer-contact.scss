@@ -2,7 +2,6 @@
   border: none;
 
   &__wrapper {
-
     @include tablet {
       display: flex;
       gap: 50px;
@@ -22,12 +21,18 @@
   }
 
   &__invitation {
+    padding-top: 20px;
     margin-bottom: 68px;
 
     @include tablet {
       display: flex;
       flex-direction: column;
-      margin-bottom: 0;
+      padding-top: 0;
+      margin-bottom: 30px;
+    }
+
+    @include desktop {
+      margin-bottom: 64px;
     }
 
     p {
@@ -40,6 +45,7 @@
         padding-left: 40px;
         margin-left: calc((100vw - 720px) / 2);
         text-align: left;
+        margin-top: -6px;
       }
 
       @media (min-width: 992px) {
@@ -53,7 +59,6 @@
       @include desktop {
         padding-left: 138px;
         max-width: 654px;
-        margin-bottom: 63px;
       }
 
       @media (min-width: 1640px) {
@@ -67,7 +72,6 @@
   }
 
   &__invitation-img {
-
     @include tablet {
       flex-grow: 1;
     }
@@ -79,7 +83,6 @@
   }
 
   &__location {
-
     @include tablet {
       display: flex;
       flex-direction: column;

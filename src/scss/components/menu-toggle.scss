@@ -3,7 +3,7 @@
   z-index: 10;
   position: fixed;
   right: 25px;
-  top: 24px;
+  top: 23px;
   border: 2px solid transparent;
   border-radius: 50%;
   display: flex;
@@ -12,11 +12,8 @@
   justify-content: center;
   border-radius: 50%;
 
-  @include tablet {
-    top: 30px;
-  }
-
   @include laptop {
+    top: 35px;
     right: auto;
     width: 79px;
     height: 79px;
@@ -46,7 +43,9 @@
   &:focus,
   &:hover,
   &:active {
-    @include tablet {
+    outline: none;
+
+    @include laptop {
       border-color: $color-primary;
     }
   }

@@ -35,12 +35,16 @@
       margin-bottom: 56px;
     }
 
-    h1 {
+    > * {
       margin-bottom: 0 !important;
 
       @include laptop {
         font-size: 20px;
         line-height: 23px;
+      }
+
+      > span {
+        color: $color-white;
       }
     }
   }

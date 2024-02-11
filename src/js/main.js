@@ -1,5 +1,6 @@
 import { mobileMenu } from "./components/mobile-menu";
 import { heroSlider } from "./components/hero-slider";
+import { clientsSlider } from "./components/clients-slider";
 import { permutation } from "./components/permutation";
 import { casesSlider } from "./components/cases-slider";
 import { jobSlider } from "./components/job-slider";
@@ -13,6 +14,7 @@ window.addEventListener(
   () => {
     mobileMenu.init();
     heroSlider.init();
+    clientsSlider.init();
     casesSlider.init();
     jobSlider.init();
     permutation.init();

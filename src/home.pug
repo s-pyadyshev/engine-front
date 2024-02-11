@@ -72,18 +72,29 @@ block content
       .link-more
         a(href="/") See what we do
   .partners.section
-    .container
-      .partners__wrapper(data-scrollspy="animate__fadeInUp")
-        .partners__item
-          img(src="images/rode-kruis.svg" alt="Rode Kruis." width="130" height="48" loading="lazy")
-        .partners__item
-          img(src="images/kngf.svg" alt="Kngf." width="93" height="65" loading="lazy")
-        .partners__item
-          img(src="images/care.svg" alt="Care." width="150" height="48" loading="lazy")
-        .partners__item
-          img(src="images/nexios.svg" alt="Nexios." width="158" height="48" loading="lazy")
-        .partners__item
-          img(src="images/zilter.svg" alt="Zilter." width="159" height="40" loading="lazy")
+    .container(data-scrollspy="animate__fadeInUp")
+      .swiper.clients-swiper
+        .swiper-wrapper 
+          .swiper-slide
+            img(src="images/rode-kruis.svg" alt="Rode Kruis." width="130" height="48" loading="lazy")
+          .swiper-slide
+            img(src="images/kngf.svg" alt="Kngf." width="93" height="65" loading="lazy")
+          .swiper-slide
+            img(src="images/care.svg" alt="Care." width="150" height="48" loading="lazy")
+          .swiper-slide
+            img(src="images/nexios.svg" alt="Nexios." width="158" height="48" loading="lazy")
+          .swiper-slide
+            img(src="images/zilter.svg" alt="Zilter." width="159" height="40" loading="lazy")
+          .swiper-slide
+            img(src="images/rode-kruis.svg" alt="Rode Kruis." width="130" height="48" loading="lazy")
+          .swiper-slide
+            img(src="images/kngf.svg" alt="Kngf." width="93" height="65" loading="lazy")
+          .swiper-slide
+            img(src="images/care.svg" alt="Care." width="150" height="48" loading="lazy")
+          .swiper-slide
+            img(src="images/nexios.svg" alt="Nexios." width="158" height="48" loading="lazy")
+          .swiper-slide
+            img(src="images/zilter.svg" alt="Zilter." width="159" height="40" loading="lazy")
   .card-about.section.background-muted
     .container
       +greeting(
