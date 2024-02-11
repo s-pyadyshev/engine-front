@@ -1,5 +1,5 @@
 .service {
-  margin-bottom: 105px;
+  margin-bottom: 20px;
 
   @include laptop {
     display: flex;
@@ -195,6 +195,14 @@
 }
 
 .section.company-intro {
+  @include tablet {
+    padding-bottom: 120px;
+  }
+
+  @media (min-width: 1024px) {
+    padding-top: 160px;
+  }
+
   @include laptop {
     padding-top: 150px;
   }
@@ -206,10 +214,6 @@
 
 .company-intro.company-intro--contact .greeting--small {
   margin-bottom: 35px;
-
-  @include tablet {
-    margin-bottom: 120px;
-  }
 
   @include laptop {
     margin-bottom: 60px;

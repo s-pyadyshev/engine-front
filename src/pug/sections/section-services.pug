@@ -1,5 +1,5 @@
 section.section.section-services.background-secondary
-  .container
+  .container-lg
     .section-services__tabs
       h4.services__filter-title Select a service:
       .tabs(data-tabs="tabs-services")
@@ -49,28 +49,20 @@ section.section.section-services.background-secondary
                 button(data-tab="animations-projects01").is-active Netherlands Red Cross
                 button(data-tab="animations-projects02") CARE Nederland
                 button(data-tab="animations-projects03") Jeugd Educatie Fonds
-              .link-more-playing 
-                p="Currently playing"
           .service__video-wrap
             div(data-tabs-content="animations-projects")
               div.is-active(data-tab-content="animations-projects01")
                 video(src="video/video.mp4" poster="images/project3.jpg" controls) 
-                //- .service__poster-icon
-                //-   img(src="images/rode-cruis.jpg", alt="")
                 .service__video-text
                   h4="Het Nederlandse Rode Kruis"
                   p="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in ex gravida, feugiat orci pellentesque, scelerisque orci. Nullam suscipit ut ex sit amet rhoncus. Aliquam erat volutpat. Nullam mollis mollis efficitur."
               div(data-tab-content="animations-projects02")
                 <iframe width="100%" src="https://www.youtube.com/embed/NpEaa2P7qZI" title="video placeholder" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                //- .service__poster-icon
-                //-   img(src="images/rode-cruis.jpg", alt="")
                 .service__video-text
                   h4="CARE Nederland"
                   p="Lorem ipsum"
               div(data-tab-content="animations-projects03")
                 video(src="video/video.mp4" controls) 
-                //- .service__poster-icon
-                //-   img(src="images/rode-cruis.jpg", alt="")
                 .service__video-text
                   h4="Jeugd Educatie Fonds"
                   p="Lorem ipsum"

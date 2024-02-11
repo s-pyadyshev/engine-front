@@ -65,6 +65,10 @@
       padding: 40px 0;
     }
 
+    @media (min-width: 1680px) {
+      margin-bottom: 0;
+    }
+
     &:only-child {
       margin-bottom: 0;
     }
@@ -97,6 +101,7 @@
     margin-right: auto;
     margin-left: auto;
     font-size: 16px;
+    margin-bottom: 0;
 
     @include laptop {
       font-size: 20px;

@@ -7,43 +7,49 @@
     padding-right: 27px;
   }
 
-  &::before {
-    content: "";
-    position: absolute;
-    bottom: calc(-41px + calc(100vw * 214 / 393));
-    left: -175px;
-    width: 175px;
-    height: 10px;
-    background-color: $color-primary;
+  // &::before {
+  //   content: "";
+  // position: absolute;
+  // bottom: calc(-41px + calc(100vw * 214 / 393));
+  // left: -175px;
+  // width: 175px;
+  // height: 10px;
+  // width: 10px;
+  // height: 200px;
+  // position: absolute;
+  // right: 0;
+  // bottom: 0;
 
-    @media (min-width: 575px) {
-      bottom: 272px;
-    }
+  // background-color: $color-primary;
 
-    @include laptop {
-      z-index: 2;
-      bottom: 312px;
-      height: 316px;
-      width: 10px;
-      left: auto;
-      right: 22px;
-      bottom: 144px;
-    }
+  // @media (min-width: 575px) {
+  //   bottom: 272px;
+  // }
 
-    @media (min-width: 1200px) {
-      bottom: 262px;
-    }
+  // @include laptop {
+  //   z-index: 2;
+  //   bottom: 312px;
+  //   height: 316px;
+  //   width: 10px;
+  //   left: auto;
+  //   right: 22px;
+  //   bottom: 144px;
+  // }
 
-    @include desktop {
-      bottom: calc(
-        calc(578px + (726 - 578) * ((100vw - 1360px) / (1920 - 1360))) - 316px
-      );
-    }
+  // @media (min-width: 1200px) {
+  //   bottom: 262px;
+  // }
 
-    @media (min-width: 1920px) {
-      bottom: 410px;
-    }
-  }
+  // @include desktop {
+  //   bottom: calc(
+  //     calc(578px + (726 - 578) * ((100vw - 1360px) / (1920 - 1360))) - 316px
+  //   );
+  // }
+
+  // @media (min-width: 1920px) {
+  //   bottom: 410px;
+  // }
+  // }
 
   &::after {
     content: "";
@@ -121,7 +127,7 @@
     }
 
     @include desktop {
-      top: 258px;
+      top: 245px;
     }
 
     .swiper-pagination-bullet {
@@ -206,12 +212,13 @@
 
       & span:last-child {
         font-weight: 700;
+
         @include desktop-sm {
           font-size: 13px;
         }
 
         @include desktop {
-          font-size: 16px;
+          font-size: 18px;
         }
       }
     }
@@ -228,7 +235,7 @@
           font-size: 13px;
         }
         @include desktop {
-          font-size: 20px;
+          font-size: 18px;
         }
       }
     }
@@ -359,4 +366,32 @@
       margin-bottom: 0px;
     }
   }
+}
+
+@keyframes setHeightNone {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 0;
+  }
+}
+
+@keyframes fillBackground {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 316px;
+  }
+}
+
+.hero-slider-progress {
+  width: 10px;
+  height: 0;
+  position: absolute;
+  right: 0;
+  bottom: 726px;
+  right: 17px;
+  width: 10px;
 }

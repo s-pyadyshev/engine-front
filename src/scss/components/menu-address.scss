@@ -25,12 +25,18 @@
     font-size: 20px;
     line-height: 35px;
     font-weight: 400;
-    gap: 63px;
+    gap: 40px;
 
     @media (min-width: 1920px) {
+      gap: 63px;
+
       &:last-child {
-        margin-left: 130px;
+        margin-left: 0;
       }
+    }
+
+    .menu-copyright img {
+      object-fit: contain;
     }
   }
 
@@ -96,7 +102,7 @@
   @include desktop-sm {
     width: 300px;
     height: 186px;
-    margin-left: 22px;
+    margin-left: 0;
     margin-top: -33px;
   }
   @include desktop {

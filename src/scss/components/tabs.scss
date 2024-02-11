@@ -8,6 +8,10 @@ $tab-border-color: $color-secondary;
   gap: 12px !important;
   list-style-type: none;
 
+  @include laptop {
+    justify-content: space-between;
+  }
+
   .button {
     font-family: $font-primary;
     letter-spacing: 0.3px;
@@ -28,6 +32,8 @@ $tab-border-color: $color-secondary;
       background-color: transparent;
       border: 0;
       color: $color-white;
+      padding-right: 0;
+      padding-left: 0;
 
       &:focus,
       &:hover,

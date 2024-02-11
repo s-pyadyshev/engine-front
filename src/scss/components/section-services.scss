@@ -1,7 +1,25 @@
 .section-services {
   padding-top: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(32, 32, 32, 1) 0%,
+    rgba(32, 32, 32, 1) 29%,
+    rgba(255, 255, 255, 1) 29%,
+    rgba(255, 255, 255, 1) 100%
+  );
+
   @include desktop {
-    padding-top: 0;
+    padding-top: 80px;
+  }
+
+  @media (min-width: 1680px) {
+    background: linear-gradient(
+      180deg,
+      rgba(32, 32, 32, 1) 0%,
+      rgba(32, 32, 32, 1) 32%,
+      rgba(255, 255, 255, 1) 32%,
+      rgba(255, 255, 255, 1) 100%
+    );
   }
 }
 
@@ -63,22 +81,14 @@
 
 .service__video-text {
   padding: 20px;
+
   @include desktop-sm {
     padding: 20px 30px;
   }
   @include desktop {
-    padding: 32px 40px 40px 70px;
+    padding: 64px 40px 40px 70px;
   }
 }
-
-// .service__poster-icon {
-//   position: absolute;
-//   top: 60%;
-
-//   @include laptop {
-//     top: 31%;
-//   }
-// }
 
 .service__video-text h4 {
   @include laptop {
@@ -95,7 +105,24 @@
 }
 
 .link-more-wrap button {
-  margin-bottom: 32px;
+  margin-bottom: 35px;
+}
+
+.link-more-wrap button.is-active {
+  position: relative;
+
+  &:after {
+    content: "Currently playing ▶";
+    position: absolute;
+    top: 0;
+    left: 100%;
+    font-size: 17px;
+    font-weight: 300;
+    min-width: 260px;
+    padding-left: 50px;
+    letter-spacing: -0.2px;
+    line-height: 1.5;
+  }
 }
 
 .link-more-playing {
@@ -108,6 +135,7 @@
 }
 
 .link-more-playing p {
+  font-weight: 300 !important;
   display: flex;
   align-items: center;
   margin-bottom: 0;
