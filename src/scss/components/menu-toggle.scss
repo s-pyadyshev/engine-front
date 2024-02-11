@@ -46,7 +46,9 @@
   &:focus,
   &:hover,
   &:active {
-    border-color: $color-primary;
+    @include tablet {
+      border-color: $color-primary;
+    }
   }
 
   .mobile-menu-active & {
@@ -67,11 +69,11 @@
   }
 
   span {
-    height: 5px;
+    height: 4px;
     width: 25px;
     border-radius: 3px;
     background-color: $color-primary;
-    margin-bottom: 4px;
+    margin-bottom: 5px;
 
     &:last-child {
       margin-bottom: 0;

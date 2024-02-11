@@ -10,7 +10,7 @@
   max-width: 323px;
 
   &--mobile {
-    margin: 175px auto 0;
+    margin-top: auto;
   }
 
   @include laptop {
@@ -24,30 +24,28 @@
 }
 
 .menu-copyright img {
+  width: 68px;
+  height: 40px;
+  margin-top: 8px;
+
+  @include laptop {
+    width: 80px;
+    height: 48px;
+    margin-top: 0;
+  }
+  @include desktop-sm {
+    width: 75px;
+    height: 60px;
+    margin-top: 20px;
+    margin-left: 10px;
+  }
+
+  @include desktop {
     width: 68px;
     height: 40px;
-    margin-top: 8px;
-
-    @include laptop {
-      width: 80px;
-      height: 48px;
-      margin-top: 0;
-    }
-    @include desktop-sm {
-      width: 75px;
-      height: 60px;
-      margin-top: 20px;
-      margin-left: 10px;
-      
-    }
-  
-    @include desktop {
-      width: 68px;
-      height: 40px;
-      margin-top: 0px;
-      margin-left: 0px;
-    }
-  
+    margin-top: 0px;
+    margin-left: 0px;
+  }
 }
 
 .menu-copyright p {
