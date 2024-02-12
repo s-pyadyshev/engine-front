@@ -1,7 +1,15 @@
 import Swiper from "swiper";
 import { Autoplay, Pagination } from "swiper/modules";
+
 export const heroSlider = (function () {
   const init = function () {
+    const heroSwiperElement = document.querySelector(".hero-swiper");
+    if (!heroSwiperElement) {
+      return;
+    }
+
+    const progressBar = document.querySelector(".hero-slider-progress");
+
     const heroSwiper = new Swiper(".hero-swiper", {
       modules: [Autoplay, Pagination],
       spaceBetween: 20,
@@ -19,13 +27,23 @@ export const heroSlider = (function () {
         type: "bullets",
         bulletElement: "button",
       },
-      autoplay: {
-        delay: 4000,
+      // autoplay: {
+      //   delay: 4000,
+      // },
+      on: {
+        init: function () {
+          progressBar.style.animation = `fillBackground 4s`;
+          setTimeout(() => {
+            progressBar.style.animation = `none`;
+          }, 3950);
+        },
+        beforeSlideChangeStart: function () {
+          progressBar.style.animation = `fillBackground 4s`;
+          setTimeout(() => {
+            progressBar.style.animation = `none`;
+          }, 3950);
+        },
       },
-    });
-
-    heroSwiper.on("click", function () {
-      heroSwiper.slideNext();
     });
   };
 

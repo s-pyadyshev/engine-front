@@ -14,8 +14,12 @@
     transition: color text-decoration-color $transition-duration;
 
     @include laptop {
-      font-size: 15px;
+      font-size: 13px;
       line-height: 19px;
+    }
+
+    @include desktop {
+      font-size: 15px;
     }
 
     &.focus,
@@ -40,5 +44,15 @@
         text-decoration-color: $color-secondary;
       }
     }
+  }
+}
+
+.switch-lang__divider {
+  font-size: 12px;
+  margin-right: 4px;
+  margin-left: 4px;
+
+  @include laptop {
+    font-size: 14px;
   }
 }

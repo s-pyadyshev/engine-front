@@ -7,54 +7,15 @@
     padding-right: 27px;
   }
 
-  // &::before {
-  //   content: "";
-  // position: absolute;
-  // bottom: calc(-41px + calc(100vw * 214 / 393));
-  // left: -175px;
-  // width: 175px;
-  // height: 10px;
-  // width: 10px;
-  // height: 200px;
-  // position: absolute;
-  // right: 0;
-  // bottom: 0;
-
-  // background-color: $color-primary;
-
-  // @media (min-width: 575px) {
-  //   bottom: 272px;
-  // }
-
-  // @include laptop {
-  //   z-index: 2;
-  //   bottom: 312px;
-  //   height: 316px;
-  //   width: 10px;
-  //   left: auto;
-  //   right: 22px;
-  //   bottom: 144px;
-  // }
-
-  // @media (min-width: 1200px) {
-  //   bottom: 262px;
-  // }
-
-  // @include desktop {
-  //   bottom: calc(
-  //     calc(578px + (726 - 578) * ((100vw - 1360px) / (1920 - 1360))) - 316px
-  //   );
-  // }
-
-  // @media (min-width: 1920px) {
-  //   bottom: 410px;
-  // }
-  // }
+  @include desktop-sm {
+    margin: 0 -30px;
+    padding: 0 30px;
+  }
 
   &::after {
     content: "";
     position: absolute;
-    bottom: calc(54px + calc(100vw * 214 / 393));
+    bottom: calc(54px + calc(100vw * 220 / 393));
     transform: translateY(50%);
     left: 10px;
     width: 85px;
@@ -66,36 +27,39 @@
     pointer-events: none;
 
     @media (min-width: 575px) {
-      bottom: 367px;
+      bottom: 375px;
     }
 
     @include tablet {
       width: 120px;
       height: 120px;
-      bottom: auto;
-      top: 20px;
+      bottom: 415px;
+    }
+
+    @media (min-width: 992px) {
+      bottom: 520px;
     }
 
     @include laptop {
       bottom: 460px;
-      transform: translate(-50%, 90%);
+      transform: translate(-50%, 50%);
     }
 
     @media (min-width: 1200px) {
-      transform: translate(-25%, 80%);
-      bottom: 578px;
+      transform: translate(25%, 50%);
+      bottom: 580px;
     }
 
     @include desktop-sm {
-      transform: translate(-25%, 70%);
       background-size: contain;
     }
 
     @include desktop {
       width: 167px;
       height: 167px;
-      bottom: 0;
-      transform: translate(-65%, 105%);
+      top: 0;
+      bottom: 680px;
+      transform: translate(-50%, 110%);
     }
   }
 
@@ -113,7 +77,7 @@
     }
 
     @media (min-width: 992px) {
-      bottom: 521px;
+      bottom: 535px;
     }
 
     @include laptop {
@@ -124,6 +88,10 @@
       width: auto;
       bottom: auto;
       top: 175px;
+    }
+
+    @media (min-width: 1280px) {
+      top: 160px;
     }
 
     @include desktop {
@@ -163,7 +131,7 @@
     @include laptop {
       position: static;
       overflow: hidden;
-      margin-bottom: -144px;
+      margin-bottom: -220px;
       padding-right: 0;
     }
 
@@ -252,7 +220,7 @@
       }
 
       @media (min-width: 992px) {
-        height: 460px;
+        height: 480px;
       }
 
       @media (min-width: 1200px) {
@@ -261,6 +229,7 @@
 
       @include laptop {
         margin-bottom: 0;
+        height: 480px;
       }
 
       @include desktop {
@@ -348,18 +317,25 @@
   }
 
   h2 {
+    margin-bottom: 80px;
     font-size: 27px;
     line-height: 35px;
     color: $color-white;
     text-align: center;
+    font-size: 38px;
 
     span {
       color: $color-primary;
     }
 
+    @include tablet {
+      margin-bottom: 40px;
+    }
+
     @include desktop-sm {
       margin-bottom: 24px;
     }
+
     @include desktop {
       font-size: 55px;
       line-height: 71px;
@@ -368,30 +344,36 @@
   }
 }
 
-@keyframes setHeightNone {
-  0% {
-    height: 0;
-  }
-  100% {
-    height: 0;
-  }
-}
-
-@keyframes fillBackground {
-  0% {
-    height: 0;
-  }
-  100% {
-    height: 316px;
+@media (min-width: 1025px) {
+  @keyframes fillBackground {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: 316px;
+    }
   }
 }
 
 .hero-slider-progress {
-  width: 10px;
-  height: 0;
-  position: absolute;
-  right: 0;
-  bottom: 726px;
-  right: 17px;
-  width: 10px;
+  display: none;
+
+  @include laptop {
+    display: block;
+    width: 10px;
+    height: 0;
+    top: 183px;
+    left: auto;
+    right: 17px;
+    background-color: $color-primary;
+    position: absolute;
+  }
+
+  @include desktop-sm {
+    top: 168px;
+  }
+
+  @include desktop {
+    top: 254px;
+  }
 }

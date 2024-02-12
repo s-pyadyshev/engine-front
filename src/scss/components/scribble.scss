@@ -34,3 +34,41 @@
     }
   }
 }
+
+.services__wrapper .greeting .scriible {
+  @include desktop-sm {
+    padding: 10px 16px;
+  }
+
+  @include desktop {
+    padding: 15px 23px;
+  }
+}
+
+.services h2 {
+  @include desktop-sm {
+    font-size: 35px;
+    line-height: 44px;
+  }
+
+  @include desktop {
+    font-size: 40px;
+    line-height: 49px;
+  }
+}
+
+.services__wrapper .greeting {
+  @include desktop-sm {
+    margin-bottom: 75px;
+  }
+
+  @include desktop {
+    margin-bottom: 60px;
+  }
+}
+
+.services h1 {
+  @include desktop {
+    font-size: 20px;
+  }
+}

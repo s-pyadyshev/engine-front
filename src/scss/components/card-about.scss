@@ -16,11 +16,36 @@
 
   h2 {
     margin-top: -8px;
+    @include desktop-sm {
+      font-size: 34px;
+      line-height: 43px;
+      max-width: 290px;
+      padding-top: 13px;
+      padding-left: 17px;
+    }
+
+    @include desktop {
+      font-size: 27px;
+      max-width: none;
+      padding-top: 0px;
+      padding-left: 0px;
+    }
   }
 
   p {
     line-height: 1.7;
     margin-bottom: 32px;
+
+    @include desktop-sm {
+      padding: 10px 0px 0 18px;
+      font-size: 18px;
+      margin-bottom: 21px;
+    }
+
+    @include desktop {
+      padding: 0;
+      margin-bottom: 32px;
+    }
   }
 
   .greeting {
@@ -30,6 +55,14 @@
     }
 
     @include laptop {
+      margin-bottom: 90px;
+    }
+
+    @include desktop-sm {
+      margin-bottom: 52px;
+    }
+
+    @include desktop {
       margin-bottom: 90px;
     }
   }
@@ -128,5 +161,31 @@
     @media (min-width: 992px) {
       margin-bottom: 0;
     }
+
+    a {
+      @include desktop-sm {
+        font-size: 17px;
+        padding-left: 19px;
+      }
+
+      @include desktop {
+        padding-left: 0;
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.card-about .container-lg {
+  @include desktop-sm {
+    max-width: 1200px;
+  }
+
+  @include desktop {
+    max-width: 1400px;
+  }
+
+  @include desktop-l {
+    max-width: 1920px;
   }
 }

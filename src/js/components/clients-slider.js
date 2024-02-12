@@ -3,7 +3,12 @@ import { Autoplay } from "swiper/modules";
 
 export const clientsSlider = (function () {
   const init = function () {
-    const heroSwiper = new Swiper(".clients-swiper", {
+    const clientsSwiperElement = document.querySelector(".clients-swiper");
+    if (!clientsSwiperElement) {
+      return;
+    }
+
+    const clientsSwiper = new Swiper(".clients-swiper", {
       modules: [Autoplay],
       spaceBetween: 20,
       slidesPerView: 2,

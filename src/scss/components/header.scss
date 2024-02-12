@@ -58,6 +58,14 @@ $mobile-menu-background-color: $color-primary;
   @media (min-width: 440px) {
     justify-content: flex-end;
   }
+
+  @include laptop {
+    align-items: flex-start;
+  }
+
+  @include desktop {
+    align-items: center;
+  }
 }
 
 .header__logo {
@@ -70,6 +78,10 @@ $mobile-menu-background-color: $color-primary;
   @media (min-width: 375px) {
     width: 140px;
     height: auto;
+  }
+
+  @include tablet {
+    width: 203px;
   }
 
   @include laptop {
@@ -162,6 +174,10 @@ $mobile-menu-background-color: $color-primary;
   @include laptop {
     margin-left: auto;
   }
+
+  @include desktop {
+    margin-right: 54px;
+  }
 }
 
 .header__menu-wrap {
@@ -201,10 +217,11 @@ $mobile-menu-background-color: $color-primary;
   }
 
   @include desktop-sm {
-    text-align: center;
+    text-align: left;
     font-size: 20px;
     margin-bottom: 100px;
   }
+
   @include desktop {
     font-size: 15px;
     font-size: 29px;
@@ -215,26 +232,5 @@ $mobile-menu-background-color: $color-primary;
 
   span {
     position: relative;
-  }
-}
-
-.header__menu-toggle {
-  position: relative;
-  top: 0px;
-  right: 0;
-
-  @include tablet {
-    top: -10px;
-    right: 55px;
-  }
-}
-
-.slash {
-  font-size: 12px;
-  margin-right: 4px;
-  margin-left: 4px;
-
-  @include laptop {
-    font-size: 14px;
   }
 }

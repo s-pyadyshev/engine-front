@@ -17,8 +17,16 @@
     font-weight: 300;
 
     @include laptop {
-      font-size: 30px;
+      font-size: 17px;
       margin-bottom: 48px;
+    }
+
+    @include desktop-sm {
+      font-size: 17px;
+    }
+
+    @include desktop {
+      font-size: 20px;
     }
 
     span {
@@ -53,5 +61,12 @@
     span {
       color: $color-secondary;
     }
+  }
+}
+
+
+.main-cases .greeting--small {
+  @include desktop-sm {
+    margin-bottom: 75px;
   }
 }

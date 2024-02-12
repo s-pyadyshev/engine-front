@@ -1,9 +1,15 @@
 import Swiper from "swiper";
-import { Pagination, Mousewheel } from "swiper/modules";
+import { Pagination, Mousewheel, Keyboard } from "swiper/modules";
+
 export const jobSlider = (function () {
   const init = function () {
+    const jobSwiperElement = document.querySelector(".job-swiper");
+    if (!jobSwiperElement) {
+      return;
+    }
+
     const jobSwiper = new Swiper(".job-swiper", {
-      modules: [Pagination, Mousewheel],
+      modules: [Pagination, Mousewheel, Keyboard],
       spaceBetween: 20,
       slidesPerView: "auto",
       centeredSlides: "auto",
@@ -17,11 +23,10 @@ export const jobSlider = (function () {
         type: "progressbar",
         clickable: true,
       },
+      keyboard: {
+        enabled: true,
+      },
     });
-
-    if (!jobSwiper.slides.length) {
-      return;
-    }
 
     const observerOptions = {
       root: null,
@@ -37,9 +42,9 @@ export const jobSlider = (function () {
     const swiperContainer = document.querySelector(".job-swiper");
     observer.observe(swiperContainer);
 
-    function handleIntersection(entries, observer) {
+    function handleIntersection(entries, _observer) {
       entries.forEach(function (entry) {
-        console.log(jobSwiper);
+        console.log(entry.isIntersecting);
         if (
           entry.isIntersecting &&
           (jobSwiper.activeIndex === 0 ||

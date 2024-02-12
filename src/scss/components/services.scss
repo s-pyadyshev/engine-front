@@ -18,15 +18,22 @@
   &__wrapper {
     padding: 40px;
     background-color: rgba($color-white, 0.05);
-
+    
+    @include desktop-sm {
+      padding: 90px 4px 90px 100px;
+    }
     @include desktop {
       padding: 85px 128px;
     }
   }
 
   h2 {
+    margin-bottom: 40px;
     color: $color-white;
-    margin-bottom: 0;
+
+    @include tablet {
+      margin-bottom: 0;
+    }
 
     span {
       color: $color-primary;
@@ -78,4 +85,41 @@
       margin-bottom: 0;
     }
   }
+}
+
+
+.services__wrapper-text {
+  display: flex;
+  flex-direction: column;
+
+  @include laptop {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.services__wrapper-text .animate__fadeInLeft {
+
+  width: 100%;
+  @include laptop {
+  width: 53%;
+}}
+
+.services__links {
+  margin-right: 5%;
+  margin-top: 6%;
+  @include desktop-sm {
+    margin-right: 14%;
+    margin-top: -11%;
+  }
+
+  @include desktop {
+    margin-right: 5%;
+    margin-top: -8%;
+  }
+}
+
+.services__links a {
+  font-size: 22px;
+  line-height: 32px;
 }

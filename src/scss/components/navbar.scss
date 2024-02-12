@@ -13,7 +13,7 @@
     }
 
     @include desktop-sm {
-      font-size: 36px;
+      font-size: 34px;
     }
 
     @include desktop {
@@ -38,13 +38,14 @@
     @include laptop {
       align-items: flex-start;
     }
+
     @include desktop-sm {
-      align-items: center;
+      align-items: flex-start;
       gap: 73px;
     }
+
     @include desktop {
       gap: 56px;
-      align-items: flex-start;
     }
   }
 }
