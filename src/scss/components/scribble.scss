@@ -10,7 +10,7 @@
     position: absolute;
     width: max-content;
     height: 100%;
-    stroke: #d5df25;
+    stroke: #d8ff01;
 
     @include desktop {
       height: max-content;
@@ -32,16 +32,6 @@
     path {
       stroke-dashoffset: 0;
     }
-  }
-}
-
-.services__wrapper .greeting .scriible {
-  @include desktop-sm {
-    padding: 10px 16px;
-  }
-
-  @include desktop {
-    padding: 15px 23px;
   }
 }
 

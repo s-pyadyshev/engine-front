@@ -2473,7 +2473,7 @@ p {
   border-radius: 50%;
   position: fixed;
   top: auto;
-  bottom: 180px;
+  bottom: 80px;
   right: 25px;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
@@ -3030,6 +3030,7 @@ footer .container::before {
   -ms-flex-pack: center;
   justify-content: center;
   border-radius: 50%;
+  left: unset;
 }
 
 .menu-toggle-close {
@@ -4057,7 +4058,7 @@ footer .container::before {
 .project__info p {
   margin-bottom: 18px;
   font-size: 15px;
-  line-height: 1;
+  line-height: 1.7;
   font-weight: 400;
   color: #d8ff01;
   text-align: left;
@@ -4142,6 +4143,10 @@ footer .container::before {
 
 .card-about__header {
   margin-bottom: 75px;
+}
+
+.card-about__header > *:not(:last-child) {
+  margin-bottom: 14px;
 }
 
 .card-about--case-study {
@@ -4319,8 +4324,8 @@ footer .container::before {
   left: 0;
   width: 100%;
   height: 45%;
-  background: transparent -webkit-gradient(linear, left top, left bottom, from(#00000000), color-stop(70%, #00000090), to(#000000AF));
-  background: transparent linear-gradient(180deg, #00000000 0%, #00000090 70%, #000000AF 100%);
+  background: transparent -webkit-gradient(linear, left top, left bottom, from(#00000000), color-stop(70%, #00000090), to(#000000af));
+  background: transparent linear-gradient(180deg, #00000000 0%, #00000090 70%, #000000af 100%);
   opacity: 0;
   -webkit-transition: opacity 0.2s;
   transition: opacity 0.2s;
@@ -4635,6 +4640,7 @@ footer .container::before {
 .page-header--image p {
   font-size: 16px;
   line-height: 1.7;
+  margin-bottom: 50px;
 }
 
 .page-header--image img {
@@ -4651,24 +4657,24 @@ footer .container::before {
   margin: 0 auto;
 }
 
-.developer-cite__wrapper {
+.client-quote__wrapper {
   padding: 74px 40px;
   background-color: #efefef;
 }
 
-.developer-cite__wrapper p {
+.client-quote__wrapper p {
   font-size: 14px;
 }
 
-.developer-cite__links .link-more {
+.client-quote__links .link-more {
   margin-bottom: 20px;
 }
 
-.developer-cite__links .link-more:last-child {
+.client-quote__links .link-more:last-child {
   margin-bottom: 0;
 }
 
-.developer-cite__links a {
+.client-quote__links a {
   font-size: 20px;
   line-height: 23px;
   text-decoration: none;
@@ -4676,6 +4682,13 @@ footer .container::before {
 
 .job-slider {
   padding-right: 46px;
+  position: relative;
+}
+
+.job-slider > .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: relative;
 }
 
@@ -4692,23 +4705,6 @@ footer .container::before {
 .job-slider .job-swiper .swiper-slide {
   height: calc(100vw * 206 / 393);
   max-height: 620px;
-}
-
-.job-slider .job-swiper .swiper-slide:last-child {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.job-slider .job-swiper .swiper-slide:last-child a {
-  font-family: "Lufga", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: 27px;
-  line-height: 35px;
-  font-weight: 700;
-  text-decoration: none;
-  margin-bottom: 0;
-  margin-top: auto;
-  max-width: 175px;
 }
 
 .job-slider .job-swiper .swiper-slide img {
@@ -4748,6 +4744,30 @@ footer .container::before {
 
 .job-slider .job-swiper .swiper-fraction .swiper-fraction-current.disabled {
   color: #d3d3d3;
+}
+
+.swiper-slide-link {
+  position: absolute;
+  margin: 0px 0 0 60%;
+  max-width: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  left: 15px;
+  padding-bottom: 80px;
+}
+
+.swiper-slide-link a {
+  font-family: "Lufga", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 22px;
+  line-height: 35px;
+  font-weight: 700;
+  text-decoration: none;
+  margin-bottom: 0;
+  margin-top: auto;
+  max-width: 175px;
 }
 
 .feedback.section {
@@ -4796,9 +4816,9 @@ footer .container::before {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
 }
 
 .service__content h3 {
@@ -4821,7 +4841,7 @@ footer .container::before {
   color: #000;
   font-weight: 700;
   font-size: 18px;
-  margin-top: auto;
+  margin-top: 0;
   margin-bottom: 20px;
 }
 
@@ -4920,7 +4940,7 @@ footer .container::before {
   width: -moz-max-content;
   width: max-content;
   height: 100%;
-  stroke: #d5df25;
+  stroke: #d8ff01;
 }
 
 .scribble svg path {
@@ -5881,7 +5901,13 @@ footer .container::before {
     align-items: center;
   }
 
-  .job-slider .job-swiper .swiper-slide:last-child a {
+  .swiper-slide-link {
+    position: relative;
+    max-width: none;
+    margin: 0;
+  }
+
+  .swiper-slide-link a {
     font-size: 40px;
     line-height: 50px;
     max-width: 245px;
@@ -6364,8 +6390,7 @@ footer .container::before {
   }
 
   .header__logo {
-    width: 249px;
-    height: 49px;
+    width: 203px;
     bottom: 0;
   }
 
@@ -6621,7 +6646,7 @@ footer .container::before {
     justify-content: space-evenly;
     color: #fff;
     margin-bottom: 18px;
-    padding-right: 100px;
+    padding-right: 0;
   }
 
   .hero-slider .hero-swiper__info-item span:first-child {
@@ -6680,7 +6705,7 @@ footer .container::before {
     height: 0;
     top: 183px;
     left: auto;
-    right: 17px;
+    right: 20px;
     background-color: #d8ff01;
     position: absolute;
   }
@@ -6774,6 +6799,7 @@ footer .container::before {
   }
 
   .project__info p {
+    line-height: 1;
     font-size: 18px;
     margin-bottom: 20px;
   }
@@ -6807,10 +6833,18 @@ footer .container::before {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
 
   .services__wrapper-text .animate__fadeInLeft {
     width: 53%;
+  }
+
+  .services__links {
+    margin-right: 12%;
+    margin-top: -5%;
   }
 
   .main-cases .container {
@@ -6855,6 +6889,7 @@ footer .container::before {
   .main-cases .cases-slider .swiper-slide:nth-child(3) .card-cases {
     max-width: 676px;
     margin-left: auto;
+    height: 100%;
   }
 
   .main-cases .cases-slider .swiper-slide .card-cases {
@@ -7045,6 +7080,7 @@ footer .container::before {
 
   .page-header--image p {
     font-size: 20px;
+    margin-bottom: 0;
   }
 
   .page-header--image img {
@@ -7410,7 +7446,6 @@ footer .container::before {
 @media (min-width: 1280px) {
   .header__logo {
     width: 203px;
-    height: 45px;
   }
 
   .header__menu-wrap {
@@ -7533,14 +7568,13 @@ footer .container::before {
 
   .hero-slider::after {
     background-size: contain;
+    -webkit-transform: translate(50%, 50%);
+    -ms-transform: translate(50%, 50%);
+    transform: translate(50%, 50%);
   }
 
   .hero-slider .swiper-pagination {
     top: 160px;
-  }
-
-  .hero-slider .hero-swiper__info {
-    padding-right: 0;
   }
 
   .hero-slider .hero-swiper__info span:last-child {
@@ -7578,26 +7612,35 @@ footer .container::before {
     font-size: 17px;
   }
 
+  .card-about {
+    padding-bottom: 100px;
+  }
+
   .card-about h2 {
     font-size: 34px;
     line-height: 43px;
     max-width: 290px;
-    padding-top: 13px;
-    padding-left: 17px;
+    padding-left: 0;
+  }
+
+  .card-about h2 {
+    font-size: 28px;
+    line-height: 39px;
+    margin-bottom: 7px;
   }
 
   .card-about p {
     padding: 10px 0px 0 18px;
-    font-size: 18px;
-    margin-bottom: 21px;
+    font-size: 15px;
+    margin-bottom: 12px;
   }
 
   .card-about .greeting {
-    margin-bottom: 52px;
+    margin-bottom: 73px;
   }
 
   .card-about .link-more a {
-    font-size: 17px;
+    font-size: 14px;
     padding-left: 19px;
   }
 
@@ -7605,13 +7648,45 @@ footer .container::before {
     max-width: 1200px;
   }
 
+  .card-about .greeting h1 {
+    font-size: 15px;
+  }
+
+  .card-about .greeting .scribble {
+    padding: 3px 10px;
+    margin-left: 54px;
+  }
+
+  .card-about .container-lg .col-xl-6 {
+    width: 59%;
+  }
+
+  .card-about .container-lg .offset-xl-1 {
+    margin-left: -0.66667%;
+    padding-left: 96px;
+  }
+
+  .services .greeting {
+    margin-bottom: 38px;
+  }
+
   .services__wrapper {
-    padding: 90px 4px 90px 100px;
+    padding: 128px 4px 90px 100px;
+  }
+
+  .services__wrapper-text {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
   }
 
   .services__links {
-    margin-right: 14%;
-    margin-top: -11%;
+    margin-right: 12%;
+    margin-top: -10%;
+  }
+
+  .services .scriible {
+    padding: 10px 16px !important;
   }
 
   .main-cases__text {
@@ -7643,6 +7718,14 @@ footer .container::before {
     font-size: 16px;
   }
 
+  .card-cases__text h3 {
+    font-size: 22px;
+  }
+
+  .card-cases__text p {
+    font-size: 17px;
+  }
+
   .card-employee--right .card-employee__name .scribble {
     font-size: 26px;
     margin-top: 12px;
@@ -7650,10 +7733,6 @@ footer .container::before {
 
   .page-header h1 {
     font-size: 20px;
-  }
-
-  .services__wrapper .greeting .scriible {
-    padding: 10px 16px;
   }
 
   .services h2 {
@@ -8034,11 +8113,6 @@ footer .container::before {
     align-items: center;
   }
 
-  .header__logo {
-    width: 249px;
-    height: 49px;
-  }
-
   .header__lang {
     margin-right: 54px;
   }
@@ -8054,6 +8128,11 @@ footer .container::before {
     line-height: 37px;
     text-align: left;
     margin-bottom: 70px;
+  }
+
+  .header__menu-toggle {
+    position: relative;
+    right: 20px;
   }
 
   .hero.section {
@@ -8074,13 +8153,18 @@ footer .container::before {
   .menu-toggle-open {
     width: 79px;
     height: 79px;
-    top: 35px;
-    right: 30px;
+    top: 29px;
+    right: unset;
   }
 
   .menu-toggle-open {
     width: 79px;
     height: 79px;
+  }
+
+  .menu-toggle-open span {
+    margin-bottom: 10px;
+    width: 36px;
   }
 
   .navbar__link {
@@ -8228,7 +8312,6 @@ footer .container::before {
   .hero-slider .hero-swiper__info {
     font-size: 18px;
     line-height: 23px;
-    padding-right: 100px;
   }
 
   .hero-slider .hero-swiper__info span:last-child {
@@ -8264,6 +8347,15 @@ footer .container::before {
 
   .hero-slider-progress {
     top: 254px;
+  }
+
+  .hero-swiper__info-item:first-child {
+    width: 45%;
+    padding-left: 275px;
+  }
+
+  .hero-swiper__info-item:last-child {
+    width: 55%;
   }
 
   .section-services {
@@ -8387,19 +8479,26 @@ footer .container::before {
   }
 
   .card-about h2 {
-    font-size: 27px;
+    font-size: 40px;
+    line-height: 1.2;
     max-width: none;
-    padding-top: 0px;
-    padding-left: 0px;
+    padding-top: 0;
+    margin-bottom: 32px;
   }
 
   .card-about p {
     padding: 0;
+    font-size: 20px;
     margin-bottom: 32px;
   }
 
   .card-about .greeting {
     margin-bottom: 90px;
+  }
+
+  .card-about__header {
+    font-size: 22px;
+    margin-bottom: 120px;
   }
 
   .card-about .link-more a {
@@ -8409,6 +8508,24 @@ footer .container::before {
 
   .card-about .container-lg {
     max-width: 1400px;
+  }
+
+  .card-about .greeting h1 {
+    font-size: 17px;
+  }
+
+  .card-about .greeting .scribble {
+    padding: 12px 24px;
+    margin-left: 0;
+  }
+
+  .card-about .container-lg .col-xl-6 {
+    width: 50%;
+  }
+
+  .card-about .container-lg .offset-xl-1 {
+    margin-left: 8.3%;
+    padding-left: 0px;
   }
 
   .services.section {
@@ -8424,6 +8541,11 @@ footer .container::before {
     padding: 85px 128px;
   }
 
+  .services h2 {
+    font-size: 40px !important;
+    line-height: 44px;
+  }
+
   .services__links a {
     font-size: 26px;
     line-height: 30px;
@@ -8436,6 +8558,10 @@ footer .container::before {
   .services__links {
     margin-right: 5%;
     margin-top: -8%;
+  }
+
+  .services .scriible {
+    padding: 12px 24px;
   }
 
   .main-cases__text {
@@ -8587,24 +8713,24 @@ footer .container::before {
     padding: 40px 0;
   }
 
-  .developer-cite.section {
+  .client-quote.section {
     padding-bottom: 100px;
   }
 
-  .developer-cite__wrapper {
+  .client-quote__wrapper {
     padding: 133px 138px;
   }
 
-  .developer-cite__wrapper h2 {
-    margin-bottom: 22px;
+  .client-quote__wrapper h2 {
+    margin-bottom: 16px;
   }
 
-  .developer-cite__wrapper p {
+  .client-quote__wrapper p {
     font-size: 20px;
     margin-bottom: 0;
   }
 
-  .developer-cite__links a {
+  .client-quote__links a {
     font-size: 26px;
     line-height: 30px;
   }
@@ -8689,10 +8815,6 @@ footer .container::before {
     height: max-content;
   }
 
-  .services__wrapper .greeting .scriible {
-    padding: 15px 23px;
-  }
-
   .services h2 {
     font-size: 40px;
     line-height: 49px;
@@ -8720,12 +8842,18 @@ footer .container::before {
   }
 
   .card-about--case-study .card-about__text {
-    width: calc(100% / 3);
+    width: 34%;
   }
 
   .card-about--case-study .card-about__img {
     height: calc(100vw * 527 / 1920);
     max-height: 527px;
+  }
+
+  .card-about--case-study .card-about__img img {
+    width: calc(100% + 135px);
+    max-width: none;
+    margin-left: -135px;
   }
 
   .card-about .container-lg {
@@ -8830,6 +8958,12 @@ footer .container::before {
 
   .main-cases__text {
     margin-right: -250px;
+  }
+}
+
+@media (min-width: 1921px) {
+  .header__logo {
+    width: 249px;
   }
 }
 

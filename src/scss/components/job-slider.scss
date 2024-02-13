@@ -9,6 +9,11 @@
     margin: 0 auto;
   }
 
+  > .container {
+    display: flex;
+    position: relative;
+  }
+
   &.section {
     padding-top: 75px;
     padding-bottom: 50px;
@@ -27,27 +32,6 @@
     .swiper-slide {
       height: calc(100vw * 206 / 393);
       max-height: 620px;
-
-      &:last-child {
-        display: flex;
-
-        a {
-          font-family: $font-secondary;
-          font-size: 27px;
-          line-height: 35px;
-          font-weight: 700;
-          text-decoration: none;
-          margin-bottom: 0;
-          margin-top: auto;
-          max-width: 175px;
-
-          @include tablet {
-            font-size: 40px;
-            line-height: 50px;
-            max-width: 245px;
-          }
-        }
-      }
 
       img {
         height: 100%;
@@ -95,6 +79,39 @@
           color: #d3d3d3;
         }
       }
+    }
+  }
+}
+
+.swiper-slide-link {
+  position: absolute;
+  margin: 0px 0 0 60%;
+  max-width: 150px;
+  display: flex;
+  flex-shrink: 0;
+  left: 15px;
+  padding-bottom: 80px;
+
+  @include tablet {
+    position: relative;
+    max-width: none;
+    margin: 0;
+  }
+
+  a {
+    font-family: $font-secondary;
+    font-size: 22px;
+    line-height: 35px;
+    font-weight: 700;
+    text-decoration: none;
+    margin-bottom: 0;
+    margin-top: auto;
+    max-width: 175px;
+
+    @include tablet {
+      font-size: 40px;
+      line-height: 50px;
+      max-width: 245px;
     }
   }
 }

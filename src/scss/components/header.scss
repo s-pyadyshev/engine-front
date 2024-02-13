@@ -85,19 +85,16 @@ $mobile-menu-background-color: $color-primary;
   }
 
   @include laptop {
-    width: 249px;
-    height: 49px;
+    width: 203px;
     bottom: 0;
   }
 
   @include desktop-sm {
     width: 203px;
-    height: 45px;
   }
 
-  @include desktop {
+  @media (min-width: 1921px) {
     width: 249px;
-    height: 49px;
   }
 
   .logo {
@@ -232,5 +229,12 @@ $mobile-menu-background-color: $color-primary;
 
   span {
     position: relative;
+  }
+}
+
+.header__menu-toggle {
+  @include desktop {
+    position: relative;
+    right: 20px;
   }
 }

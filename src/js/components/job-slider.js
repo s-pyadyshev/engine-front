@@ -26,12 +26,19 @@ export const jobSlider = (function () {
       keyboard: {
         enabled: true,
       },
+      freeMode: {
+        enabled: true,
+        sticky: false,
+        momentumBounce: false,
+      },
+      mousewheel: {
+        eventsTarget: ".job-slider",
+      },
     });
 
     const observerOptions = {
       root: null,
-      rootMargin: "0px",
-      threshold: 0.5,
+      threshold: 1,
     };
 
     const observer = new IntersectionObserver(
@@ -39,33 +46,33 @@ export const jobSlider = (function () {
       observerOptions
     );
 
-    const swiperContainer = document.querySelector(".job-swiper");
+    const swiperContainer = document.querySelector(".job-slider");
     observer.observe(swiperContainer);
 
     function handleIntersection(entries, _observer) {
-      entries.forEach(function (entry) {
-        console.log(entry.isIntersecting);
-        if (
-          entry.isIntersecting &&
-          (jobSwiper.activeIndex === 0 ||
-            jobSwiper.activeIndex + 1 === jobSwiper.slides.length)
-        ) {
+      if (entries[0].isIntersecting === true)
+        if (!jobSwiper.isEnd || !jobSwiper.isBeginning) {
           jobSwiper.mousewheel.enable();
-        } else {
-          jobSwiper.mousewheel.disable();
         }
-      });
     }
+
+    jobSwiper.on("reachEnd", function () {
+      jobSwiper.mousewheel.disable();
+    });
+
+    jobSwiper.on("reachBeginning", function () {
+      jobSwiper.mousewheel.disable();
+    });
 
     const currentFraction = document.querySelector(".swiper-fraction-current");
     const totalFraction = document.querySelector(".swiper-fraction-total");
 
     if (jobSwiper.slides.length >= 10) {
-      totalFraction.textContent = jobSwiper.slides.length;
+      totalFraction.textContent = jobSwiper.slides.length - 1;
       currentFraction.textContent =
         "0" + (jobSwiper.activeIndex + 1).toString();
     } else {
-      totalFraction.textContent = "0" + jobSwiper.slides.length.toString();
+      totalFraction.textContent = `0${jobSwiper.slides.length}`;
       currentFraction.textContent =
         "0" + (jobSwiper.activeIndex + 1).toString();
     }
@@ -73,27 +80,21 @@ export const jobSlider = (function () {
     jobSwiper.on("slideChange", function () {
       if (
         jobSwiper.activeIndex === 0 ||
-        jobSwiper.activeIndex + 1 === jobSwiper.slides.length
-      ) {
-        jobSwiper.mousewheel.disable();
-      } else {
-        jobSwiper.mousewheel.enable();
-      }
+        jobSwiper.activeIndex + 1 >= jobSwiper.slides.length - 1
+      )
+        if (jobSwiper.slides.length >= 10) {
+          currentFraction.textContent = "0" + jobSwiper.activeIndex.toString();
 
-      if (jobSwiper.slides.length >= 10) {
-        currentFraction.textContent =
-          "0" + (jobSwiper.activeIndex + 1).toString();
-
-        if (jobSwiper.activeIndex + 1 >= 10) {
-          let arrCurrentFraction = [];
-          arrCurrentFraction = currentFraction.textContent.split("");
-          arrCurrentFraction.shift();
-          currentFraction.textContent = arrCurrentFraction.join("");
+          if (jobSwiper.activeIndex + 1 >= 10) {
+            let arrCurrentFraction = [];
+            arrCurrentFraction = currentFraction.textContent.split("");
+            arrCurrentFraction.shift();
+            currentFraction.textContent = arrCurrentFraction.join("");
+          }
+        } else {
+          currentFraction.textContent =
+            "0" + (jobSwiper.activeIndex + 1).toString();
         }
-      } else {
-        currentFraction.textContent =
-          "0" + (jobSwiper.activeIndex + 1).toString();
-      }
 
       if (currentFraction.textContent == totalFraction.textContent) {
         currentFraction.classList.add("disabled");

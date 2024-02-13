@@ -27,9 +27,9 @@ export const heroSlider = (function () {
         type: "bullets",
         bulletElement: "button",
       },
-      // autoplay: {
-      //   delay: 4000,
-      // },
+      autoplay: {
+        delay: 4000,
+      },
       on: {
         init: function () {
           progressBar.style.animation = `fillBackground 4s`;

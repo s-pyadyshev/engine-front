@@ -52,6 +52,7 @@
 
     @include desktop-sm {
       background-size: contain;
+      transform: translate(50%, 50%);
     }
 
     @include desktop {
@@ -166,16 +167,12 @@
         justify-content: space-evenly;
         color: $color-white;
         margin-bottom: 18px;
-        padding-right: 100px;
-      }
-      @include desktop-sm {
         padding-right: 0;
       }
 
       @include desktop {
         font-size: 18px;
         line-height: 23px;
-        padding-right: 100px;
       }
 
       & span:last-child {
@@ -364,7 +361,7 @@
     height: 0;
     top: 183px;
     left: auto;
-    right: 17px;
+    right: 20px;
     background-color: $color-primary;
     position: absolute;
   }
@@ -375,5 +372,20 @@
 
   @include desktop {
     top: 254px;
+  }
+}
+
+.hero-swiper__info-item {
+  &:first-child {
+    @include desktop {
+      width: 45%;
+      padding-left: 275px;
+    }
+  }
+
+  &:last-child {
+    @include desktop {
+      width: 55%;
+    }
   }
 }

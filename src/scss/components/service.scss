@@ -18,7 +18,7 @@
   margin-bottom: 30px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
 
   @include laptop {
     width: 50%;
@@ -79,7 +79,7 @@
   color: $color-black;
   font-weight: 700;
   font-size: 18px;
-  margin-top: auto;
+  margin-top: 0;
   margin-bottom: 20px;
 
   @include tablet {

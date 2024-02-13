@@ -1,5 +1,4 @@
-.developer-cite {
-
+.client-quote {
   &.section {
     @include desktop {
       padding-bottom: 100px;
@@ -16,7 +15,7 @@
 
     h2 {
       @include desktop {
-        margin-bottom: 22px;
+        margin-bottom: 16px;
       }
     }
 

@@ -152,9 +152,11 @@
   p {
     font-size: 16px;
     line-height: 1.7;
+    margin-bottom: 50px;
 
     @include laptop {
       font-size: 20px;
+      margin-bottom: 0;
     }
   }
 

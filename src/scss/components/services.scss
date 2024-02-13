@@ -10,6 +10,9 @@
   }
 
   .greeting {
+    @include desktop-sm {
+      margin-bottom: 38px;
+    }
     @include desktop {
       margin-bottom: 60px;
     }
@@ -18,9 +21,9 @@
   &__wrapper {
     padding: 40px;
     background-color: rgba($color-white, 0.05);
-    
+
     @include desktop-sm {
-      padding: 90px 4px 90px 100px;
+      padding: 128px 4px 90px 100px;
     }
     @include desktop {
       padding: 85px 128px;
@@ -35,6 +38,10 @@
       margin-bottom: 0;
     }
 
+    @include desktop {
+      font-size: 40px !important;
+      line-height: 44px;
+    }
     span {
       color: $color-primary;
     }
@@ -57,7 +64,6 @@
         color: $color-primary;
         text-decoration-color: $color-primary;
       }
-
       @include desktop {
         font-size: 26px;
         line-height: 30px;
@@ -87,7 +93,6 @@
   }
 }
 
-
 .services__wrapper-text {
   display: flex;
   flex-direction: column;
@@ -95,22 +100,32 @@
   @include laptop {
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+  }
+
+  @include desktop-sm {
+    align-items: flex-start;
   }
 }
 
 .services__wrapper-text .animate__fadeInLeft {
-
   width: 100%;
   @include laptop {
-  width: 53%;
-}}
+    width: 53%;
+  }
+}
 
 .services__links {
   margin-right: 5%;
   margin-top: 6%;
+
+  @include laptop {
+    margin-right: 12%;
+    margin-top: -5%;
+  }
   @include desktop-sm {
-    margin-right: 14%;
-    margin-top: -11%;
+    margin-right: 12%;
+    margin-top: -10%;
   }
 
   @include desktop {
@@ -122,4 +137,14 @@
 .services__links a {
   font-size: 22px;
   line-height: 32px;
+}
+
+.services .scriible {
+  @include desktop-sm {
+    padding: 10px 16px !important;
+  }
+
+  @include desktop {
+    padding: 12px 24px;
+  }
 }
