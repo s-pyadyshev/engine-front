@@ -102,26 +102,53 @@
   flex-direction: column;
   align-items: flex-start;
   flex-shrink: 0;
+  width: 100%;
 }
 
 .link-more-wrap button {
   margin-bottom: 35px;
+  text-align: left;
+  max-width: 70%;
+  word-wrap: break-word;
+
+  @include laptop {
+    max-width: 60%;
+  }
+
+  @include desktop {
+    max-width: 70%;
+  }
 }
 
 .link-more-wrap button.is-active {
   position: relative;
 
   &:after {
-    content: "Currently playing ▶";
+    content: "▶";
     position: absolute;
     top: 0;
     left: 100%;
     font-size: 17px;
     font-weight: 300;
-    min-width: 260px;
-    padding-left: 50px;
+    min-width: 20px;
+    padding-left: 0;
     letter-spacing: -0.2px;
-    line-height: 1.5;
+    line-height: 1;
+    white-space: nowrap;
+    padding-left: 20px;
+
+    @include tablet {
+      content: "Currently playing ▶";
+    }
+
+    @include laptop {
+      font-size: 15px;
+    }
+
+    @include desktop {
+      font-size: 17px;
+      padding-left: 50px;
+    }
   }
 }
 

@@ -47,5 +47,9 @@
     @include desktop {
       gap: 56px;
     }
+
+    @media (min-width: 1280px) and (max-height: 920px) {
+      gap: 50px;
+    }
   }
 }

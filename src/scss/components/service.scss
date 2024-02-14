@@ -150,16 +150,15 @@
   line-height: 1;
   text-decoration: none;
   border-radius: 3px;
-  z-index: 3;
+  z-index: 1;
   right: 0;
   margin: -25px auto 0;
-
   transition: background-color $transition-duration;
 
   &:focus,
   &:hover,
   &:active {
-    color: $color-primary;
+    color: $color-primary !important;
     background-color: $color-black;
     text-decoration: none;
   }
@@ -177,6 +176,22 @@
     right: 83px;
     left: auto;
     line-height: 1;
+  }
+
+  &.text-default {
+    color: #000 !important;
+
+    &:focus,
+    &:hover,
+    &:active {
+      color: $color-primary !important;
+      background-color: $color-black;
+      text-decoration: none;
+    }
+
+    @include laptop {
+      color: #fff !important;
+    }
   }
 }
 
