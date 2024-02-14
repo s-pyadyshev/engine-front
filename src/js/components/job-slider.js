@@ -58,7 +58,10 @@ export const jobSlider = (function () {
 
     jobSwiper.on("reachEnd", function () {
       jobSwiper.mousewheel.disable();
-      if (jobSwiper.activeIndex + 1 === jobSwiper.slides.length - 1) {
+      if (
+        window.innerWidth < 768 &&
+        jobSwiper.activeIndex + 1 === jobSwiper.slides.length - 1
+      ) {
         setTimeout(() => {
           jobSwiper.setTranslate(jobSwiper.getTranslate() + -170);
         }, 500);

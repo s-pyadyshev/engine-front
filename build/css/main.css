@@ -5927,6 +5927,7 @@ footer .container::before {
     position: relative;
     max-width: none;
     margin: 0;
+    padding-left: 20px;
   }
 
   .swiper-slide-link a {
