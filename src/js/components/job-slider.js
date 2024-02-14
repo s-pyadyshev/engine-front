@@ -16,6 +16,14 @@ export const jobSlider = (function () {
       breakpoints: {
         1025: {
           spaceBetween: 30,
+          freeMode: {
+            enabled: true,
+            sticky: false,
+            momentumBounce: false,
+          },
+          mousewheel: {
+            eventsTarget: ".job-slider",
+          },
         },
       },
       pagination: {
@@ -25,14 +33,6 @@ export const jobSlider = (function () {
       },
       keyboard: {
         enabled: true,
-      },
-      freeMode: {
-        enabled: true,
-        sticky: false,
-        momentumBounce: false,
-      },
-      mousewheel: {
-        eventsTarget: ".job-slider",
       },
     });
 
@@ -58,6 +58,11 @@ export const jobSlider = (function () {
 
     jobSwiper.on("reachEnd", function () {
       jobSwiper.mousewheel.disable();
+      if (jobSwiper.activeIndex + 1 === jobSwiper.slides.length - 1) {
+        setTimeout(() => {
+          jobSwiper.setTranslate(jobSwiper.getTranslate() + -170);
+        }, 500);
+      }
     });
 
     jobSwiper.on("reachBeginning", function () {
